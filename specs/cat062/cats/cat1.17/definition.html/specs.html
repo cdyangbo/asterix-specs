@@ -1,0 +1,3896 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Asterix category 062 - SDPS Track Messages &#8212; cat062 category specification 2014-12-01, 1.17 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat062 category specification 2014-12-01, 1.17 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Asterix category 062 - SDPS Track Messages</a><ul>
+<li><a class="reference internal" href="#preamble">Preamble</a></li>
+<li><a class="reference internal" href="#description-of-standard-data-items">Description of standard data items</a><ul>
+<li><a class="reference internal" href="#i062-010-data-source-identifier">I062/010 - Data Source Identifier</a></li>
+<li><a class="reference internal" href="#i062-015-service-identification">I062/015 - Service Identification</a></li>
+<li><a class="reference internal" href="#i062-040-track-number">I062/040 - Track Number</a></li>
+<li><a class="reference internal" href="#i062-060-track-mode-3-a-code">I062/060 - Track Mode 3/A Code</a></li>
+<li><a class="reference internal" href="#i062-070-time-of-track-information">I062/070 - Time Of Track Information</a></li>
+<li><a class="reference internal" href="#i062-080-track-status">I062/080 - Track Status</a></li>
+<li><a class="reference internal" href="#i062-100-calculated-track-position">I062/100 - Calculated Track Position</a></li>
+<li><a class="reference internal" href="#i062-105-calculated-position-in-wgs-84-co-ordinates">I062/105 - Calculated Position In WGS-84 Co-ordinates</a></li>
+<li><a class="reference internal" href="#i062-110-mode-5-data-reports-extended-mode-1-code">I062/110 - Mode 5 Data reports &amp; Extended Mode 1 Code</a></li>
+<li><a class="reference internal" href="#i062-120-track-mode-2-code">I062/120 - Track Mode 2 Code</a></li>
+<li><a class="reference internal" href="#i062-130-calculated-track-geometric-altitude">I062/130 - Calculated Track Geometric Altitude</a></li>
+<li><a class="reference internal" href="#i062-135-calculated-track-barometric-altitude">I062/135 - Calculated Track Barometric Altitude</a></li>
+<li><a class="reference internal" href="#i062-136-measured-flight-level">I062/136 - Measured Flight Level</a></li>
+<li><a class="reference internal" href="#i062-185-calculated-track-velocity-cartesian">I062/185 - Calculated Track Velocity (Cartesian)</a></li>
+<li><a class="reference internal" href="#i062-200-mode-of-movement">I062/200 - Mode of Movement</a></li>
+<li><a class="reference internal" href="#i062-210-calculated-acceleration-cartesian">I062/210 - Calculated Acceleration (Cartesian)</a></li>
+<li><a class="reference internal" href="#i062-220-calculated-rate-of-climb-descent">I062/220 - Calculated Rate Of Climb/Descent</a></li>
+<li><a class="reference internal" href="#i062-245-target-identification">I062/245 - Target Identification</a></li>
+<li><a class="reference internal" href="#i062-270-target-size-orientation">I062/270 - Target Size &amp; Orientation</a></li>
+<li><a class="reference internal" href="#i062-290-system-track-update-ages">I062/290 - System Track Update Ages</a></li>
+<li><a class="reference internal" href="#i062-295-track-data-ages">I062/295 - Track Data Ages</a></li>
+<li><a class="reference internal" href="#i062-300-vehicle-fleet-identification">I062/300 - Vehicle Fleet Identification</a></li>
+<li><a class="reference internal" href="#i062-340-measured-information">I062/340 - Measured Information</a></li>
+<li><a class="reference internal" href="#i062-380-aircraft-derived-data">I062/380 - Aircraft Derived Data</a></li>
+<li><a class="reference internal" href="#i062-390-flight-plan-related-data">I062/390 - Flight Plan Related Data</a></li>
+<li><a class="reference internal" href="#i062-500-estimated-accuracies">I062/500 - Estimated Accuracies</a></li>
+<li><a class="reference internal" href="#i062-510-track-status">I062/510 - Track Status</a></li>
+<li><a class="reference internal" href="#i062-re-reserved-expansion-field">I062/RE - Reserved Expansion Field</a></li>
+<li><a class="reference internal" href="#i062-sp-special-purpose-field">I062/SP - Special Purpose Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-application-profile-for-category-062">User Application Profile for Category 062</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Indices and tables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/specs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="asterix-category-062-sdps-track-messages">
+<h1>Asterix category 062 - SDPS Track Messages<a class="headerlink" href="#asterix-category-062-sdps-track-messages" title="Permalink to this headline">¶</a></h1>
+<p><strong>category</strong>: 062</p>
+<p><strong>edition</strong>: 1.17</p>
+<p><strong>date</strong>: 2014-12-01</p>
+<div class="section" id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
+<p>Surveillance data exchange.</p>
+</div>
+<div class="section" id="description-of-standard-data-items">
+<h2>Description of standard data items<a class="headerlink" href="#description-of-standard-data-items" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="i062-010-data-source-identifier">
+<h3>I062/010 - Data Source Identifier<a class="headerlink" href="#i062-010-data-source-identifier" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identification of the system sending the data</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>SAC</strong> - <em>System Area Code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>SIC</strong> - <em>System Identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>The up-to-date list of SACs is published on the
+EUROCONTROL Web Site (<a class="reference external" href="http://www.eurocontrol.int/asterix">http://www.eurocontrol.int/asterix</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="i062-015-service-identification">
+<h3>I062/015 - Service Identification<a class="headerlink" href="#i062-015-service-identification" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identification of the service provided to one or more users.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div>
+<div class="section" id="i062-040-track-number">
+<h3>I062/040 - Track Number<a class="headerlink" href="#i062-040-track-number" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identification of a track</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div>
+<div class="section" id="i062-060-track-mode-3-a-code">
+<h3>I062/060 - Track Mode 3/A Code<a class="headerlink" href="#i062-060-track-mode-3-a-code" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Mode-3/A code converted into octal representation.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>V</strong> - <em>validated</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Code validated</div>
+<div class="line">1: Code not validated</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>G</strong> - <em>garbled</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default</div>
+<div class="line">1: Garbled code</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>CH</strong> - <em>Change in Mode 3/A</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No Change</div>
+<div class="line">1: Mode 3/A has changed</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>ABCD</strong> - <em>Mode-3/A reply in octal representation</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i062-070-time-of-track-information">
+<h3>I062/070 - Time Of Track Information<a class="headerlink" href="#i062-070-time-of-track-information" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Absolute time stamping of the information provided
+in the track message, in the form of elapsed time since
+last mid night, expressed as UTC.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 7</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{7}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {128}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.0078125\)</span> s</p></li>
+</ul>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>This is the time of the track state vector.</p></li>
+<li><p>The time is reset to zero at every midnight.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-080-track-status">
+<h3>I062/080 - Track Status<a class="headerlink" href="#i062-080-track-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Status of a track.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>MON</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Multisensor track</div>
+<div class="line">1: Monosensor track</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SPI</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: SPI present in the last report received from a sensor capable of decoding this data</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MRH</strong> - <em>Most Reliable Height</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Barometric altitude (Mode C) more reliable</div>
+<div class="line">1: Geometric altitude more reliable</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SRC</strong> - <em>Source of calculated track altitude for I062/130</em></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: no source</div>
+<div class="line">1: GNSS</div>
+<div class="line">2: 3D radar</div>
+<div class="line">3: triangulation</div>
+<div class="line">4: height from coverage</div>
+<div class="line">5: speed look-up table</div>
+<div class="line">6: default height</div>
+<div class="line">7: multilateration</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>CNF</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Confirmed track</div>
+<div class="line">1: Tentative track</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SIM</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Actual track</div>
+<div class="line">1: Simulated track</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TSE</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: last message transmitted to the user for the track</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TSB</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: first message transmitted to the user for the track</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>FPC</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not flight-plan correlated</div>
+<div class="line">1: Flight plan correlated</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AFF</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: ADS-B data inconsistent with other surveillance information</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>STP</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Slave Track Promotion</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>KOS</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Complementary service used</div>
+<div class="line">1: Background service used</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AMA</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: track not resulting from amalgamation process</div>
+<div class="line">1: track resulting from amalgamation process</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MD4</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No Mode 4 interrogation</div>
+<div class="line">1: Friendly target</div>
+<div class="line">2: Unknown target</div>
+<div class="line">3: No reply</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ME</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Military Emergency present in the last report received from a sensor capable of decoding this data</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MI</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Military Identification present in the last report received from a sensor capable of decoding this data</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MD5</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No Mode 5 interrogation</div>
+<div class="line">1: Friendly target</div>
+<div class="line">2: Unknown target</div>
+<div class="line">3: No reply</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>CST</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Age of the last received track update is higher than system dependent threshold (coasting)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>PSR</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Age of the last received PSR track update is higher than system dependent threshold</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SSR</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Age of the last received SSR track update is higher than system dependent threshold</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MDS</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Age of the last received Mode S track update is higher than system dependent threshold</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ADS</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Age of the last received ADS-B track update is higher than system dependent threshold</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SUC</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Special Used Code (Mode A codes to be defined in the system to mark a track with special interest)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AAC</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default value</div>
+<div class="line">1: Assigned Mode A Code Conflict (same discrete Mode A Code assigned to another track)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SDS</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Combined</div>
+<div class="line">1: Co-operative only</div>
+<div class="line">2: Non-Cooperative only</div>
+<div class="line">3: Not defined</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>EMS</strong></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No emergency</div>
+<div class="line">1: General emergency</div>
+<div class="line">2: Lifeguard / medical</div>
+<div class="line">3: Minimum fuel</div>
+<div class="line">4: No communications</div>
+<div class="line">5: Unlawful interference</div>
+<div class="line">6: “Downed” Aircraft</div>
+<div class="line">7: Undefined</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>PFT</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No indication</div>
+<div class="line">1: Potential False Track Indication</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>FPLT</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default value</div>
+<div class="line">1: Track created / updated with FPL data</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>DUPT</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default value</div>
+<div class="line">1: Duplicate Mode 3/A Code</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>DUPF</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default value</div>
+<div class="line">1: Duplicate Flight Plan</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>DUPM</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default value</div>
+<div class="line">1: Duplicate Flight Plan due to manual correlation</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Track type and coasting can also be derived from I062/290 System Track Update Ages</p></li>
+<li><p>If the system supports the technology, default value (0) means that the technology was used to produce the report</p></li>
+<li><p>If the system does not support the technology, default value is meaningless.</p></li>
+<li><p>Bits (EMS): other than subfield #11 of data item I062/380, these
+bits allow the SDPS to set the emergency indication as derived from
+other sources than ADS-B (e.g. based on the Mode 3/A code).</p></li>
+<li><p>Bit (PFT): with this flag an SDPS can indicate that internal
+processing points to the track being potentially false. Details on the
+internal processing are system dependent.</p></li>
+<li><p>Bit (FPLT): this bit - if set - indicates that the information contained
+in the target report has been updated by flight plan related data
+because no surveillance data was available for the target, or was
+created based on flight plan related data in areas with no
+surveillance.</p></li>
+<li><p>Bit (DUPT) is set to 1 if the correlation between the target report and a flight
+plan is not possible because the Mode 3/A code stated in the flight plan exists
+more than once in the surveillance data.</p></li>
+<li><p>Bit (DUPF) - if set to 1 - indicates that for a specific surveillance target more
+than one flight plan exists which makes correlation impossible.</p></li>
+<li><p>Bit (DUPM) is set to 1 if a target was correlated manually but also a regular
+flight plan exists.</p></li>
+<li><p>All tracks for which bits DUPT, DUPF or DUPM are set to 1 are marked on the CWP.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-100-calculated-track-position">
+<h3>I062/100 - Calculated Track Position<a class="headerlink" href="#i062-100-calculated-track-position" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Calculated position in Cartesian co-ordinates with a resolution of
+0.5m, in two’s complement form.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>X</strong> - <em>x-coordinate</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 1</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{1}}\)</span> m = <span class="math notranslate nohighlight">\(1 / {2}\)</span> m <span class="math notranslate nohighlight">\(\approx 0.5\)</span> m</p></li>
+</ul>
+<p><strong>Y</strong> - <em>y-coordinate</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 1</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{1}}\)</span> m = <span class="math notranslate nohighlight">\(1 / {2}\)</span> m <span class="math notranslate nohighlight">\(\approx 0.5\)</span> m</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i062-105-calculated-position-in-wgs-84-co-ordinates">
+<h3>I062/105 - Calculated Position In WGS-84 Co-ordinates<a class="headerlink" href="#i062-105-calculated-position-in-wgs-84-co-ordinates" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Calculated Position in WGS-84 Co-ordinates with a resolution of
+<span class="math notranslate nohighlight">\(180/2^{25}\)</span> degrees.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>LAT</strong> - <em>Latitude</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 25</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{25}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {33554432}\)</span> deg <span class="math notranslate nohighlight">\(\approx 5.364418029785156e-06\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -90\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 90\)</span> deg</p></li>
+</ul>
+<p><strong>LON</strong> - <em>Longitude</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 25</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{25}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {33554432}\)</span> deg <span class="math notranslate nohighlight">\(\approx 5.364418029785156e-06\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -180\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt; 180\)</span> deg</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The LSB provides a resolution at least better than 0.6m.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i062-110-mode-5-data-reports-extended-mode-1-code">
+<h3>I062/110 - Mode 5 Data reports &amp; Extended Mode 1 Code<a class="headerlink" href="#i062-110-mode-5-data-reports-extended-mode-1-code" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Mode 5 Data reports &amp; Extended Mode 1 Code.</p>
+<p><em>Structure</em>:</p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>SUM</strong> - <em>Mode 5 Summary</em></p>
+<blockquote>
+<div><p><strong>M5</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No Mode 5 interrogation</div>
+<div class="line">1: Mode 5 interrogation</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ID</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No authenticated Mode 5 ID reply</div>
+<div class="line">1: Authenticated Mode 5 ID reply</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>DA</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No authenticated Mode 5 Data reply or Repor</div>
+<div class="line">1: Authenticated Mode 5 Data reply or Report (i.e any valid Mode 5 reply type other than ID)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>M1</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode 1 code not present or not from Mode 5 reply</div>
+<div class="line">1: Mode 1 code from Mode 5 reply</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>M2</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode 2 code not present or not from Mode 5 reply</div>
+<div class="line">1: Mode 2 code from Mode 5 reply</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>M3</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode 3 code not present or not from Mode 5 reply</div>
+<div class="line">1: Mode 3 code from Mode 5 reply</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MC</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode C altitude code not present or not from Mode 5 reply</div>
+<div class="line">1: Mode C altitude from Mode 5 reply</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X</strong> - <em>X-pulse from Mode 5 Data reply or Report</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no authenticated Data reply or Report received.</div>
+<div class="line">1: X-pulse set to one</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>PMN</strong> - <em>Mode 5 PIN/ National Origin/Mission Code</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>PIN</strong> - <em>PIN Code</em></p>
+<ul class="simple">
+<li><p>14 bits [<code class="docutils literal notranslate"><span class="pre">..............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+</ul>
+<p><strong>NAT</strong> - <em>National Origin</em></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>MIS</strong> - <em>Mission Code</em></p>
+<ul class="simple">
+<li><p>6 bits [<code class="docutils literal notranslate"><span class="pre">......</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>POS</strong> - <em>Mode 5 Reported Position</em></p>
+<blockquote>
+<div><p><strong>LAT</strong> - <em>Latitude</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 23</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{23}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {8388608}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.1457672119140625e-05\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -90\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 90\)</span> deg</p></li>
+</ul>
+<p><strong>LON</strong> - <em>Longitude</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 23</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{23}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {8388608}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.1457672119140625e-05\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -180\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt; 180\)</span> deg</p></li>
+</ul>
+</div></blockquote>
+<p><strong>GA</strong> - <em>Mode 5 GNSS-derived Altitude</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>RES</strong> - <em>Resolution with which the GNSS-derived Altitude (GA) is reported</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: GA reported in 100 ft increments.</div>
+<div class="line">1: GA reported in 25 ft increments.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>GA</strong> - <em>GNSS-derived Altitude of target, expressed as height above WGS 84 ellipsoid.</em></p>
+<ul class="simple">
+<li><p>14 bits [<code class="docutils literal notranslate"><span class="pre">..............</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(25\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -1000\)</span> ft</p></li>
+</ul>
+</div></blockquote>
+<p><strong>EM1</strong> - <em>Extended Mode 1 Code in Octal Representation</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>EM1</strong> - <em>Extended Mode 1 reply in octal representation</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>TOS</strong> - <em>Time Offset for POS and GA</em></p>
+<p>Time Offset coded as a twos complement number with an LSB of 1/128 s. The time at which the Mode 5 Reported Position (Subfield #3) and Mode 5 GNSS-derived Altitude (Subfield #4) are valid is given by Time of Day (I048/140) plus Time Offset.</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 7</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{7}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {128}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.0078125\)</span> s</p></li>
+</ul>
+<p><strong>XP</strong> - <em>X Pulse Presence</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+</ul>
+<p><strong>X5</strong> - <em>X-pulse from Mode 5 Data reply or Report</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no authenticated Data reply or Report received.</div>
+<div class="line">1: X-pulse set to one (present).</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>XC</strong> - <em>X-pulse from Mode C reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no Mode C reply.</div>
+<div class="line">1: X-pulse set to one (present).</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X3</strong> - <em>X-pulse from Mode 3/A reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no Mode 3/A reply.</div>
+<div class="line">1: X-pulse set to one (present).</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X2</strong> - <em>X-pulse from Mode 2 reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no Mode 2 reply.</div>
+<div class="line">1: X-pulse set to one (present).</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X1</strong> - <em>X-pulse from Mode 1 reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no Mode 1 reply.</div>
+<div class="line">1: X-pulse set to one (present).</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The flags M2, M3, MC refer to the contents of data subitems I062/120,
+I062/060 and I062/135 respectively. The flag M1 refers to the contents
+of the Subfield #5 (Extended Mode 1 Code in Octal Representation).</p></li>
+<li><p>If an authenticated Mode 5 reply is received with the Emergency
+bit set, then the Military Emergency bit (ME) in Data Item I062/080,
+Track Status, shall be set.</p></li>
+<li><p>If an authenticated Mode 5 reply is received with the Identification
+of Position bit set, then the Special Position Identification
+bit (SPI) in Data Item I062/080, Track Status, shall be set.</p></li>
+<li><p>The resolution implied by the LSB is better than the resolution
+with which Mode 5 position reports are transmitted from aircraft
+transponders using currently defined formats.</p></li>
+<li><p>GA is coded as a 14-bit two’s complement binary number with
+an LSB of 25 ft. irrespective of the setting of RES.</p></li>
+<li><p>The minimum value of GA that can be reported is -1000 ft.</p></li>
+<li><p>If Subfield #1 is present, the M1 bit in Subfield #1 indicates
+whether the Extended Mode 1 Code is from a Mode 5 reply or
+a Mode 1 reply. If Subfield #1 is not present, the Extended
+Mode 1 Code is from a Mode 1 reply.</p></li>
+<li><p>TOS shall be assumed to be zero if Subfield #6 is not present.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-120-track-mode-2-code">
+<h3>I062/120 - Track Mode 2 Code<a class="headerlink" href="#i062-120-track-mode-2-code" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Mode 2 code associated to the track</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>ABCD</strong> - <em>Mode-2 code in octal representation</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i062-130-calculated-track-geometric-altitude">
+<h3>I062/130 - Calculated Track Geometric Altitude<a class="headerlink" href="#i062-130-calculated-track-geometric-altitude" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Vertical distance between the target and the projection of its position
+on the earth’s ellipsoid, as defined by WGS84, in two’s complement form.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 6.25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(6.25\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -1500\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 150000\)</span> ft</p></li>
+</ul>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>LSB is required to be less than 10 ft by ICAO</p></li>
+<li><p>The source of altitude is identified in bits (SRC) of item
+I062/080 Track Status.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-135-calculated-track-barometric-altitude">
+<h3>I062/135 - Calculated Track Barometric Altitude<a class="headerlink" href="#i062-135-calculated-track-barometric-altitude" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Calculated Barometric Altitude of the track, in two’s complement form.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>QNH</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No QNH correction applied</div>
+<div class="line">1: QNH correction applied</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>CTB</strong> - <em>Calculated Track Barometric Altitude</em></p>
+<ul class="simple">
+<li><p>15 bits [<code class="docutils literal notranslate"><span class="pre">...............</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “FL”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> FL = <span class="math notranslate nohighlight">\(1 / {4}\)</span> FL <span class="math notranslate nohighlight">\(\approx 0.25\)</span> FL</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -15\)</span> FL</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 1500\)</span> FL</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>ICAO specifies a range between -10 FL and 1267 FL for Mode C</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-136-measured-flight-level">
+<h3>I062/136 - Measured Flight Level<a class="headerlink" href="#i062-136-measured-flight-level" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Last valid and credible flight level used to update the track, in two’s
+complement form.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “FL”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> FL = <span class="math notranslate nohighlight">\(1 / {4}\)</span> FL <span class="math notranslate nohighlight">\(\approx 0.25\)</span> FL</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -15\)</span> FL</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 1500\)</span> FL</p></li>
+</ul>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The criteria to determine the credibility of the flight level
+are Tracker dependent.</p></li>
+<li><p>Credible means: within reasonable range of change with respect
+to the previous detection.</p></li>
+<li><p>ICAO specifies a range between -10 FL and 1267 FL for Mode C.</p></li>
+<li><p>This item includes the barometric altitude received from ADS-B.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-185-calculated-track-velocity-cartesian">
+<h3>I062/185 - Calculated Track Velocity (Cartesian)<a class="headerlink" href="#i062-185-calculated-track-velocity-cartesian" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Calculated track velocity expressed in Cartesian co-ordinates,in
+two’s complement form.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>VX</strong></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -8192\)</span> m/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 8191.75\)</span> m/s</p></li>
+</ul>
+<p><strong>VY</strong></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -8192\)</span> m/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 8191.75\)</span> m/s</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The y-axis points to the Geographical North at the location of
+the target.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i062-200-mode-of-movement">
+<h3>I062/200 - Mode of Movement<a class="headerlink" href="#i062-200-mode-of-movement" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Calculated Mode of Movement of a target.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>TRANS</strong> - <em>Transversal Acceleration</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Constant Course</div>
+<div class="line">1: Right Turn</div>
+<div class="line">2: Left Turn</div>
+<div class="line">3: Undetermined</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>LONG</strong> - <em>Longitudinal Acceleration</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Constant Groundspeed</div>
+<div class="line">1: Increasing Groundspeed</div>
+<div class="line">2: Decreasing Groundspeed</div>
+<div class="line">3: Undetermined</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>VERT</strong> - <em>Transversal Acceleration</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Level</div>
+<div class="line">1: Climb</div>
+<div class="line">2: Descent</div>
+<div class="line">3: Undetermined</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ADF</strong> - <em>Altitude Discrepancy Flag</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No altitude discrepancy</div>
+<div class="line">1: Altitude discrepancy</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The ADF, if set, indicates that a difference has been detected
+in the altitude information derived from radar as compared to
+other technologies (such as ADS-B).</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i062-210-calculated-acceleration-cartesian">
+<h3>I062/210 - Calculated Acceleration (Cartesian)<a class="headerlink" href="#i062-210-calculated-acceleration-cartesian" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Calculated Acceleration of the target expressed in Cartesian co-ordinates,
+in two’s complement form.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>Ax</strong></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s2”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s2 = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s2 <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s2</p></li>
+</ul>
+<p><strong>Ay</strong></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s2”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s2 = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s2 <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s2</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The y-axis points to the Geographical North at the location of the target.</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-220-calculated-rate-of-climb-descent">
+<h3>I062/220 - Calculated Rate Of Climb/Descent<a class="headerlink" href="#i062-220-calculated-rate-of-climb-descent" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Calculated rate of Climb/Descent of an aircraft in two’s complement form.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 6.25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft/min”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(6.25\)</span> ft/min</p></li>
+</ul>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A positive value indicates a climb, whereas a negative value
+indicates a descent.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-245-target-identification">
+<h3>I062/245 - Target Identification<a class="headerlink" href="#i062-245-target-identification" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Target (aircraft or vehicle) identification in 8 characters.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>STI</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Callsign or registration downlinked from target</div>
+<div class="line">1: Callsign not downlinked from target</div>
+<div class="line">2: Registration not downlinked from target</div>
+<div class="line">3: Invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>6 bits [<code class="docutils literal notranslate"><span class="pre">......</span></code>]</p></li>
+</ul>
+<p><strong>CHR</strong> - <em>Characters 1-8 (coded on 6 bits each) defining target identification</em></p>
+<ul class="simple">
+<li><p>48 bits [<code class="docutils literal notranslate"><span class="pre">................................................</span></code>]</p></li>
+<li><p>ICAO string (6-bits per character)</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>For coding, see section 3.1.2.9 of [Ref.3]</p></li>
+<li><p>As the Callsign of the target can already be transmitted
+(thanks to I062/380 Subfield #2 if downlinked from the
+aircraft or thanks to I062/390 Subfield #2 if the target
+is correlated to a flight plan), and in order to avoid
+confusion at end user’s side, this item SHALL not be used.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-270-target-size-orientation">
+<h3>I062/270 - Target Size &amp; Orientation<a class="headerlink" href="#i062-270-target-size-orientation" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Target size defined as length and width of the detected target, and orientation.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>LENGTH</strong> - <em>Length</em></p>
+<p>Length</p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> m</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ORIENTATION</strong> - <em>Orientation</em></p>
+<p>Length</p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 360</p></li>
+<li><p>fractional bits: 7</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(360 / {2^{7}}\)</span> deg = <span class="math notranslate nohighlight">\(360 / {128}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.8125\)</span> deg</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>WIDTH</strong> - <em>Width</em></p>
+<p>Length</p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> m</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The orientation gives the direction which the target nose is
+pointing to,relative to the Geographical North.</p></li>
+<li><p>When the length only is sent, the largest dimension is provided.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-290-system-track-update-ages">
+<h3>I062/290 - System Track Update Ages<a class="headerlink" href="#i062-290-system-track-update-ages" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Ages of the last plot/local track/target report update for each sensor type.</p>
+<p><em>Structure</em>:</p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>TRK</strong></p>
+<p>Actual track age since occurence</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 255/4\)</span> s</p></li>
+</ul>
+<p><strong>PSR</strong></p>
+<p>Age of the last primary detection used to update the track</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>SSR</strong></p>
+<p>Age of the last secondary detection used to update the track</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MDS</strong></p>
+<p>Age of the last Mode S detection used to update the track</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>ADS</strong></p>
+<p>Age of the last ADS-C report used to update the track</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 16383.75\)</span> s</p></li>
+</ul>
+<p><strong>ES</strong></p>
+<p>Age of the last 1090 Extended Squitter ADS-B report used to update the track</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>VDL</strong></p>
+<p>Age of the last VDL Mode 4 ADS-B report used to update the track</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>UAT</strong></p>
+<p>Age of the last UAT ADS-B report used to update the track</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>LOP</strong></p>
+<p>Age of the last magnetic loop detection</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MLT</strong></p>
+<p>Age of the last MLT detection</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Except for Track Age, the ages are counted from Data Item I062/070,
+Time Of Track Information, using the following formula:
+Age = Time of track information - Time of last detection used
+to update the track</p></li>
+<li><p>The time of last detection is derived from monosensor category time of day</p></li>
+<li><p>If the data has never been received, then the corresponding
+subfield is not sent.</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-295-track-data-ages">
+<h3>I062/295 - Track Data Ages<a class="headerlink" href="#i062-295-track-data-ages" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Ages of the data provided.</p>
+<p><em>Structure</em>:</p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>MFL</strong> - <em>Measured Flight Level Age</em></p>
+<p>Age of the last valid and credible Mode C code or barometric altitude from ADS-B used to update the track (I062/136).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MD1</strong> - <em>Mode 1 Age</em></p>
+<p>Age of the last valid and credible Mode 1 code used to update the track (I062/110).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MD2</strong> - <em>Mode 2 Age</em></p>
+<p>Age of the last valid and credible Mode 2 code used to update the track (I062/120).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MDA</strong> - <em>Mode 3/A Age</em></p>
+<p>Age of the last valid and credible Mode 3/A code used to update the track (I062/060).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MD4</strong> - <em>Mode 4 Age</em></p>
+<p>Age of the last valid and credible Mode 4 code used to update the track.</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MD5</strong> - <em>Mode 5 Age</em></p>
+<p>Age of the last valid and credible Mode 5 code used to update the track (I062/110).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MHG</strong> - <em>Magnetic Heading Age</em></p>
+<p>Age of the DAP “Magnetic Heading” in item 062/380 (Subfield #3).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>IAS</strong> - <em>Indicated Airspeed / Mach Nb age</em></p>
+<p>Age of the DAP “Indicated Airspeed/Mach Number” in item 062/380 (Subfield #4).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>TAS</strong> - <em>True Airspeed Age</em></p>
+<p>Age of the DAP “True Airspeed” in item 062/380 (Subfield #5).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>SAL</strong> - <em>Selected Altitude Age</em></p>
+<p>Age of the DAP “Selected Altitude” in item 062/380 (Subfield #6).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>FSS</strong> - <em>Final State Selected Altitude Age</em></p>
+<p>Age of the DAP “Final State Selected Altitude Age” in item 062/380 (Subfield #7).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>TID</strong> - <em>Trajectory Intent Age</em></p>
+<p>Age of the DAP “Trajectory Intent” in item 062/380 (Subfield #8).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>COM</strong> - <em>Communication/ACAS Capability and Flight Status Age</em></p>
+<p>Age of the DAP “Communication/ACAS Capability and Flight Status” in item 062/380 (Subfield #10).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>SAB</strong> - <em>Status Reported by ADS-B Age</em></p>
+<p>Age of the DAP “Status Reported by ADS-B” in item 062/380 (Subfield #11).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>ACS</strong> - <em>ACAS Resolution Advisory Report Age</em></p>
+<p>Age of the DAP “ACAS Resolution Advisory Report” in item 062/380 (Subfield #12).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>BVR</strong> - <em>Barometric Vertical Rate Age</em></p>
+<p>Age of the DAP “Barometric Vertical Rate” in item 062/380 (Subfield #13).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>GVR</strong> - <em>Geometrical Vertical Rate Age</em></p>
+<p>Age of the DAP “Geometrical Vertical Rate” in item 062/380 (Subfield #14).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>RAN</strong> - <em>Roll Angle Age</em></p>
+<p>Age of the DAP “Roll Angle” in item 062/380 (Subfield #15).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>TAR</strong> - <em>Track Angle Rate Age</em></p>
+<p>Age of the DAP “Track Angle Rate” in item 062/380 (Subfield #16).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>TAN</strong> - <em>Track Angle Age</em></p>
+<p>Age of the DAP “Track Angle” in item 062/380 (Subfield #17).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>GSP</strong> - <em>Ground Speed Age</em></p>
+<p>Age of the DAP “Ground Speed” in item 062/380 (Subfield #18).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>VUN</strong> - <em>Velocity Uncertainty Age</em></p>
+<p>Age of the DAP “Velocity Uncertainty” in item 062/380 (Subfield #19).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MET</strong> - <em>Meteorological Data Age</em></p>
+<p>Age of the DAP “Meteorological Data” in item 062/380 (Subfield #20).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>EMC</strong> - <em>Emitter Category Age</em></p>
+<p>Age of the DAP “Emitter Category” in item 062/380 (Subfield #21).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>POS</strong> - <em>Position Age</em></p>
+<p>Age of the DAP “Position” in item 062/380 (Subfield #23).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>GAL</strong> - <em>Geometric Altitude Age</em></p>
+<p>Age of the DAP “Geometric Altitude” in item 062/380 (Subfield #24).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>PUN</strong> - <em>Position Uncertainty Age</em></p>
+<p>Age of the DAP “Position Uncertainty” in item 062/380 (Subfield #25).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MB</strong> - <em>Mode S MB Data Age</em></p>
+<p>Age of the DAP “Mode S MB Data” in item 062/380 (Subfield #22).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>IAR</strong> - <em>Indicated Airspeed Data Age</em></p>
+<p>Age of the DAP “Indicated Airspeed” in item 062/380 (Subfield #26).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>MAC</strong> - <em>Mach Number Data Age</em></p>
+<p>Age of the DAP “Mach Number” in item 062/380 (Subfield #27).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+<p><strong>BPS</strong> - <em>Barometric Pressure Setting Data Age</em></p>
+<p>Age of the DAP “Barometric Pressure Setting” in item 062/380 (Subfield #28).</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 63.75\)</span> s</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Despite there are now two subfields (#29 and #30) reporting the ages
+of, respectively, the Indicated Airspeed track data and the Mach
+Number track data, the subfield #8 (and so its presence bit , bit-32) is
+kept free in order to prevent a full incompatibility with previous
+releases of ASTERIX Cat. 062 already implemented.</p></li>
+<li><p>In all the subfields, the age is the time delay since the value was
+measured</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-300-vehicle-fleet-identification">
+<h3>I062/300 - Vehicle Fleet Identification<a class="headerlink" href="#i062-300-vehicle-fleet-identification" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Vehicle fleet identification number.</p>
+<p><em>Structure</em>:</p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Unknown</div>
+<div class="line">1: ATC equipment maintenance</div>
+<div class="line">2: Airport maintenance</div>
+<div class="line">3: Fire</div>
+<div class="line">4: Bird scarer</div>
+<div class="line">5: Snow plough</div>
+<div class="line">6: Runway sweeper</div>
+<div class="line">7: Emergency</div>
+<div class="line">8: Police</div>
+<div class="line">9: Bus</div>
+<div class="line">10: Tug (push/tow)</div>
+<div class="line">11: Grass cutter</div>
+<div class="line">12: Fuel</div>
+<div class="line">13: Baggage</div>
+<div class="line">14: Catering</div>
+<div class="line">15: Aircraft maintenance</div>
+<div class="line">16: Flyco (follow me)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="i062-340-measured-information">
+<h3>I062/340 - Measured Information<a class="headerlink" href="#i062-340-measured-information" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: All measured data related to the last report used to update the track.
+These data are not used for ADS-B.</p>
+<p><em>Structure</em>:</p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>SID</strong> - <em>Sensor Identification</em></p>
+<blockquote>
+<div><p><strong>SAC</strong> - <em>System Area Code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>SIC</strong> - <em>System Identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>POS</strong> - <em>Measured Position</em></p>
+<blockquote>
+<div><p><strong>RHO</strong> - <em>Measured distance</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 8</p></li>
+<li><p>unit: “NM”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{8}}\)</span> NM = <span class="math notranslate nohighlight">\(1 / {256}\)</span> NM <span class="math notranslate nohighlight">\(\approx 0.00390625\)</span> NM</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 256\)</span> NM</p></li>
+</ul>
+<p><strong>THETA</strong> - <em>Measured azimuth</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 360</p></li>
+<li><p>fractional bits: 16</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(360 / {2^{16}}\)</span> deg = <span class="math notranslate nohighlight">\(360 / {65536}\)</span> deg <span class="math notranslate nohighlight">\(\approx 0.0054931640625\)</span> deg</p></li>
+</ul>
+</div></blockquote>
+<p><strong>HEIGHT</strong> - <em>Measured 3-D Height</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(25\)</span> ft</p></li>
+</ul>
+<p><strong>MDC</strong></p>
+<blockquote>
+<div><p><strong>V</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Code validated</div>
+<div class="line">1: Code not validated</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>G</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default</div>
+<div class="line">1: Garbled code</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>LMC</strong></p>
+<p>Last Measured Mode C Code, in two’s complement form</p>
+<ul class="simple">
+<li><p>14 bits [<code class="docutils literal notranslate"><span class="pre">..............</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “FL”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> FL = <span class="math notranslate nohighlight">\(1 / {4}\)</span> FL <span class="math notranslate nohighlight">\(\approx 0.25\)</span> FL</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -12\)</span> FL</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 1270\)</span> FL</p></li>
+</ul>
+</div></blockquote>
+<p><strong>MDA</strong></p>
+<blockquote>
+<div><p><strong>V</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Code validated</div>
+<div class="line">1: Code not validated</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>G</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default</div>
+<div class="line">1: Garbled code</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>L</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: MODE 3/A code as derived from the reply of the transponder,</div>
+<div class="line">1: MODE 3/A code as provided by a sensor local tracker.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>ABCD</strong> - <em>Mode-3/A reply under the form of 4 digits in octal representation</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>TYP</strong></p>
+<blockquote>
+<div><p><strong>TYP</strong></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No detection</div>
+<div class="line">1: Single PSR detection</div>
+<div class="line">2: Single SSR detection</div>
+<div class="line">3: SSR + PSR detection</div>
+<div class="line">4: Single ModeS All-Call</div>
+<div class="line">5: Single ModeS Roll-Call</div>
+<div class="line">6: ModeS All-Call + PSR</div>
+<div class="line">7: ModeS Roll-Call +PSR</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SIM</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Actual target report</div>
+<div class="line">1: Simulated target report</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>RAB</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Report from target transponder</div>
+<div class="line">1: Report from field monitor (item transponder)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TST</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Real target report</div>
+<div class="line">1: Test target report</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>In case of a plot, the measured bias-corrected polar co-ordinates;</p></li>
+<li><p>In case of a sensor local track, the measured bias-corrected
+polar co-ordinates of the plot associated to the track;</p></li>
+<li><p>In case of a local track without detection, the extrapolated
+bias-corrected polar co-ordinates.</p></li>
+<li><p>Smoothed MODE 3/A data (L = 1) will be used in case of absence of
+MODE 3/A code information in the plot or in case of difference
+between plot and sensor local track MODE 3/A code information.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-380-aircraft-derived-data">
+<h3>I062/380 - Aircraft Derived Data<a class="headerlink" href="#i062-380-aircraft-derived-data" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Data derived directly by the aircraft.</p>
+<p><em>Structure</em>:</p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>ADR</strong> - <em>Target address</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>ID</strong> - <em>Target Identification</em></p>
+<p>Characters 1-8 (coded on 6 bits each) defining a target identification when flight plan is available or the registration marking when no flight plan is available. Coding rules are provided in [3] Section 3.1.2.9.1.2 and Table 3-9”</p>
+<ul class="simple">
+<li><p>48 bits [<code class="docutils literal notranslate"><span class="pre">................................................</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>MHG</strong> - <em>Magnetic Heading</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 360</p></li>
+<li><p>fractional bits: 16</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(360 / {2^{16}}\)</span> deg = <span class="math notranslate nohighlight">\(360 / {65536}\)</span> deg <span class="math notranslate nohighlight">\(\approx 0.0054931640625\)</span> deg</p></li>
+</ul>
+<p><strong>IAS</strong> - <em>Indicated Airspeed/Mach No</em></p>
+<blockquote>
+<div><p><strong>IM</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Air Speed = IAS, LSB (Bit-1) = 2 -14 NM/s</div>
+<div class="line">1: Air Speed = Mach, LSB (Bit-1) = 0.001</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>IAS</strong></p>
+<ul class="simple">
+<li><p>15 bits [<code class="docutils literal notranslate"><span class="pre">...............</span></code>]</p></li>
+</ul>
+<ul>
+<li><p>Content of this item depends on the value of item <code class="docutils literal notranslate"><span class="pre">380/IAS/IM</span></code>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>In case of <code class="docutils literal notranslate"><span class="pre">380/IAS/IM</span> <span class="pre">==</span> <span class="pre">0</span></code>:</dt><dd><ul>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 14</p></li>
+<li><p>unit: “NM/s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{14}}\)</span> NM/s = <span class="math notranslate nohighlight">\(1 / {16384}\)</span> NM/s <span class="math notranslate nohighlight">\(\approx 6.103515625e-05\)</span> NM/s</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>In case of <code class="docutils literal notranslate"><span class="pre">380/IAS/IM</span> <span class="pre">==</span> <span class="pre">1</span></code>:</dt><dd><ul>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 0.001</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “mach”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(0.001\)</span> mach</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>TAS</strong> - <em>True Air Speed</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “kt”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> kt</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span> kt</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 2046\)</span> kt</p></li>
+</ul>
+<p><strong>SAL</strong> - <em>Selected Altitude</em></p>
+<blockquote>
+<div><p><strong>SAS</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No source information provided</div>
+<div class="line">1: Source information provided</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SRC</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Unknown</div>
+<div class="line">1: Aircraft Altitude</div>
+<div class="line">2: FCU/MCP Selected Altitude</div>
+<div class="line">3: FMS Selected Altitude</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ALT</strong> - <em>Altitude in two’s complement form</em></p>
+<ul class="simple">
+<li><p>13 bits [<code class="docutils literal notranslate"><span class="pre">.............</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(25\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -1300\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 100000\)</span> ft</p></li>
+</ul>
+</div></blockquote>
+<p><strong>FSS</strong> - <em>Final State Selected Altitude</em></p>
+<blockquote>
+<div><p><strong>MV</strong></p>
+<p>Manage Vertical Mode</p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not active</div>
+<div class="line">1: Active</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AH</strong></p>
+<p>Altitude Hold</p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not active</div>
+<div class="line">1: Active</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AM</strong></p>
+<p>Approach Mode</p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not active</div>
+<div class="line">1: Active</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Altitude</strong> - <em>Altitude in two’s complement form</em></p>
+<ul class="simple">
+<li><p>13 bits [<code class="docutils literal notranslate"><span class="pre">.............</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(25\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -1300\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 100000\)</span> ft</p></li>
+</ul>
+</div></blockquote>
+<p><strong>TIS</strong> - <em>Trajectory Intent Status</em></p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>NAV</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Trajectory Intent Data is available for this aircraft</div>
+<div class="line">1: Trajectory Intent Data is not available for this aircraft</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>NVB</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Trajectory Intent Data is valid</div>
+<div class="line">1: Trajectory Intent Data is not valid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>TID</strong> - <em>Trajectory Intent Data</em></p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>TCA</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: TCP number available</div>
+<div class="line">1: TCP number not available</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>NC</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: TCP compliance</div>
+<div class="line">1: TCP non-compliance</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TCPNumber</strong></p>
+<p>Trajectory Change Point number</p>
+<ul class="simple">
+<li><p>6 bits [<code class="docutils literal notranslate"><span class="pre">......</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>Altitude</strong> - <em>Altitude in two’s complement form</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 10</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(10\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -1500\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 150000\)</span> ft</p></li>
+</ul>
+<p><strong>Latitude</strong> - <em>In WGS.84 in rwo’s complementde in two’s complement.</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 23</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{23}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {8388608}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.1457672119140625e-05\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -90\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 90\)</span> deg</p></li>
+</ul>
+<p><strong>Longitude</strong> - <em>In WGS.84 in rwo’s complementde in two’s complement.</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 23</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{23}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {8388608}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.1457672119140625e-05\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -180\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt; 180\)</span> deg</p></li>
+</ul>
+<p><strong>PT</strong> - <em>Point Type</em></p>
+<ul>
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Unknown</div>
+<div class="line">1: Fly by waypoint (LT)</div>
+<div class="line">2: Fly over waypoint (LT)</div>
+<div class="line">3: Hold pattern (LT)</div>
+<div class="line">4: Procedure hold (LT)</div>
+<div class="line">5: Procedure turn (LT)</div>
+<div class="line">6: RF leg (LT)</div>
+<div class="line">7: Top of climb (VT)</div>
+<div class="line">8: Top of descent (VT)</div>
+<div class="line">9: Start of level (VT)</div>
+<div class="line">10: Cross-over altitude (VT)</div>
+<div class="line">11: Transition altitude (VT)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TD</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: N/A</div>
+<div class="line">1: Turn right</div>
+<div class="line">2: Turn left</div>
+<div class="line">3: No turn</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TRA</strong></p>
+<p>Turn Radius Availability</p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: TTR not available</div>
+<div class="line">1: TTR available</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TOA</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: TOV available</div>
+<div class="line">1: TOV not available</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TOV</strong> - <em>Time Over Point</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> s</p></li>
+</ul>
+<p><strong>TTR</strong> - <em>TCP Turn radius</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 0.01</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “Nm”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(0.01\)</span> Nm</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span> Nm</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 655.35\)</span> Nm</p></li>
+</ul>
+</div></blockquote>
+<p><strong>COM</strong> - <em>Communications/ACAS Capability and Flight Status</em></p>
+<blockquote>
+<div><p><strong>COM</strong> - <em>Communications capability of the transponder</em></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No communications capability (surveillance only)</div>
+<div class="line">1: Comm. A and Comm. B capability</div>
+<div class="line">2: Comm. A, Comm. B and Uplink ELM</div>
+<div class="line">3: Comm. A, Comm. B, Uplink ELM and Downlink ELM</div>
+<div class="line">4: Level 5 Transponder capability</div>
+<div class="line">5: Not assigned</div>
+<div class="line">6: Not assigned</div>
+<div class="line">7: Not assigned</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>STAT</strong> - <em>Flight Status</em></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No alert, no SPI, aircraft airborne</div>
+<div class="line">1: No alert, no SPI, aircraft on ground</div>
+<div class="line">2: Alert, no SPI, aircraft airborne</div>
+<div class="line">3: Alert, no SPI, aircraft on ground</div>
+<div class="line">4: Alert, SPI, aircraft airborne or on ground</div>
+<div class="line">5: No alert, SPI, aircraft airborne or on ground</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>SSC</strong> - <em>Specific service capability</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No</div>
+<div class="line">1: Yes</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ARC</strong> - <em>Altitude reporting capability</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: 100 ft resolution</div>
+<div class="line">1: 25 ft resolution</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AIC</strong> - <em>Aircraft identification capability</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No</div>
+<div class="line">1: Yes</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>B1A</strong> - <em>BDS 1,0 bit 16</em></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>B1B</strong> - <em>BDS BDS 1,0 bits 37/40</em></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>SAB</strong> - <em>Status reported by ADS-B</em></p>
+<blockquote>
+<div><p><strong>AC</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: unknown</div>
+<div class="line">1: ACAS not operational</div>
+<div class="line">2: ACAS operational</div>
+<div class="line">3: invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MN</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: unknown</div>
+<div class="line">1: Multiple navigational aids not operating</div>
+<div class="line">2: Multiple navigational aids operating</div>
+<div class="line">3: invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>DC</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: unknown</div>
+<div class="line">1: Differential correction</div>
+<div class="line">2: No differential correction</div>
+<div class="line">3: invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>GBS</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Transponder Ground Bit not set or unknown</div>
+<div class="line">1: Transponder Ground Bit set</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>6 bits [<code class="docutils literal notranslate"><span class="pre">......</span></code>]</p></li>
+</ul>
+<p><strong>STAT</strong> - <em>Flight Status</em></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No emergency</div>
+<div class="line">1: General emergency</div>
+<div class="line">2: Lifeguard / medical</div>
+<div class="line">3: Minimum fuel</div>
+<div class="line">4: No communications</div>
+<div class="line">5: Unlawful interference</div>
+<div class="line">6: “Downed” Aircraft</div>
+<div class="line">7: Unknown</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>ACS</strong> - <em>ACAS Resolution Advisory Report</em></p>
+<p>Currently active Resolution Advisory (RA), if any, generated by the ACAS associated with the transponder transmitting the report and threat identity data. (MB Data) 56-bit message conveying Mode S Comm B message data of BDS Register 3,0</p>
+<ul class="simple">
+<li><p>56 bits [<code class="docutils literal notranslate"><span class="pre">........................................................</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>BVR</strong> - <em>Barometric Vertical Rate</em></p>
+<p>Barometric Vertical Rate in two’s complement form</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 6.25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft/min”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(6.25\)</span> ft/min</p></li>
+</ul>
+<p><strong>GVR</strong> - <em>Geometric Vertical Rate</em></p>
+<p>Geometric Vertical Rate in two’s complement form</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 6.25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft/min”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(6.25\)</span> ft/min</p></li>
+</ul>
+<p><strong>RAN</strong> - <em>Roll Angle</em></p>
+<p>Roll Angle in two’s complement form</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 0.01</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(0.01\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -180\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 180\)</span> deg</p></li>
+</ul>
+<p><strong>TAR</strong> - <em>Track Angle Rate</em></p>
+<blockquote>
+<div><p><strong>TI</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not available</div>
+<div class="line">1: Left</div>
+<div class="line">2: Right</div>
+<div class="line">3: Straight</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>6 bits [<code class="docutils literal notranslate"><span class="pre">......</span></code>]</p></li>
+</ul>
+<p><strong>ROT</strong> - <em>Rate of Turn in two’s complement form</em></p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “deg/s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> deg/s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> deg/s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> deg/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -15\)</span> deg/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 15\)</span> deg/s</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+</div></blockquote>
+<p><strong>TAN</strong> - <em>Track Angle</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 360</p></li>
+<li><p>fractional bits: 16</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(360 / {2^{16}}\)</span> deg = <span class="math notranslate nohighlight">\(360 / {65536}\)</span> deg <span class="math notranslate nohighlight">\(\approx 0.0054931640625\)</span> deg</p></li>
+</ul>
+<p><strong>GSP</strong> - <em>Ground Speed</em></p>
+<p>Ground Speed in two’s complement form referenced to WGS84</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 14</p></li>
+<li><p>unit: “NM/s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{14}}\)</span> NM/s = <span class="math notranslate nohighlight">\(1 / {16384}\)</span> NM/s <span class="math notranslate nohighlight">\(\approx 6.103515625e-05\)</span> NM/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -2\)</span> NM/s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt; 2\)</span> NM/s</p></li>
+</ul>
+<p><strong>VUN</strong> - <em>Velocity Uncertainty</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>MET</strong> - <em>Meteorogical Data</em></p>
+<blockquote>
+<div><p><strong>WS</strong> - <em>Wind Speed Valid Flag</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not valid Wind Speed</div>
+<div class="line">1: Valid Wind Speed</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>WD</strong> - <em>Wind Direction Valid Flag</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not valid Wind Direction</div>
+<div class="line">1: Valid Wind Direction</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TMP</strong> - <em>Temperature Valid Flag</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not valid Temperature</div>
+<div class="line">1: Valid Temperature</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TRB</strong> - <em>Turbolence Valid Flag</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not valid Turbulence</div>
+<div class="line">1: Valid Turbulence</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>WS_D</strong> - <em>Wind Speed</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “kt”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> kt</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span> kt</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 300\)</span> kt</p></li>
+</ul>
+<p><strong>WD_D</strong> - <em>Wind Direction</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 1\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 360\)</span> deg</p></li>
+</ul>
+<p><strong>TMP_D</strong> - <em>Temperature in degrees celsius</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “degC”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> degC = <span class="math notranslate nohighlight">\(1 / {4}\)</span> degC <span class="math notranslate nohighlight">\(\approx 0.25\)</span> degC</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -100\)</span> degC</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 100\)</span> degC</p></li>
+</ul>
+<p><strong>TRB_D</strong> - <em>Turbulence</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned integer</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span></p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 15\)</span></p></li>
+</ul>
+</div></blockquote>
+<p><strong>EMC</strong> - <em>Emitter Category</em></p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: light aircraft =&lt; 7000 kg</div>
+<div class="line">2: reserved</div>
+<div class="line">3: 7000 kg &lt; medium aircraft &lt; 136000 kg</div>
+<div class="line">4: reserved</div>
+<div class="line">5: 136000 kg =&lt; heavy aircraft</div>
+<div class="line">6: highly manoeuvrable (5g acceleration capability) and high speed (&gt;400 knots cruise)</div>
+<div class="line">7: reserved</div>
+<div class="line">8: reserved</div>
+<div class="line">9: reserved</div>
+<div class="line">10: rotocraft</div>
+<div class="line">11: glider / sailplane</div>
+<div class="line">12: lighter-than-air</div>
+<div class="line">13: unmanned aerial vehicle</div>
+<div class="line">14: space / transatmospheric vehicle</div>
+<div class="line">15: ultralight / handglider / paraglider</div>
+<div class="line">16: parachutist / skydiver</div>
+<div class="line">17: reserved</div>
+<div class="line">18: reserved</div>
+<div class="line">19: reserved</div>
+<div class="line">20: surface emergency vehicle</div>
+<div class="line">21: surface service vehicle</div>
+<div class="line">22: item ground or tethered obstruction</div>
+<div class="line">23: reserved</div>
+<div class="line">24: reserved</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>POS</strong> - <em>Position</em></p>
+<blockquote>
+<div><p><strong>Latitude</strong> - <em>In WGS.84 in two’s complement form.</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 23</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{23}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {8388608}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.1457672119140625e-05\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -90\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 90\)</span> deg</p></li>
+</ul>
+<p><strong>Longitude</strong> - <em>In WGS.84 in two’s complement form.</em></p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 23</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{23}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {8388608}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.1457672119140625e-05\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -180\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt; 180\)</span> deg</p></li>
+</ul>
+<dl class="simple">
+<dt>remark</dt><dd><p>This corresponds to a resolution of at least 2.4 meters.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>GAL</strong> - <em>Geometric Altitude</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 6.25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(6.25\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -1500\)</span> ft</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 150000\)</span> ft</p></li>
+</ul>
+<p><strong>PUN</strong> - <em>Position Uncertainty</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>PUN</strong> - <em>Position Uncertainty</em></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>MB</strong> - <em>MODE S MB DATA</em></p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>MBdata</strong> - <em>56 bit message conveying Mode S B message data</em></p>
+<ul class="simple">
+<li><p>56 bits [<code class="docutils literal notranslate"><span class="pre">........................................................</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>BDS1</strong> - <em>Comm B data Buffer Store 1 Address</em></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>BDS2</strong> - <em>Comm B data Buffer Store 2 Address</em></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>IAR</strong> - <em>Indicated Airspeed</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “kt”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> kt</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span> kt</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 1100\)</span> kt</p></li>
+</ul>
+<p><strong>MAC</strong> - <em>Mach Number</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 0.008</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “Mach”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(0.008\)</span> Mach</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span> Mach</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 4.096\)</span> Mach</p></li>
+</ul>
+<p><strong>BPS</strong> - <em>Barometric Pressure Setting (derived from Mode S BDS 4,0)</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>BPS</strong></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 0.1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “mb”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(0.1\)</span> mb</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span> mb</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 409.5\)</span> mb</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>NC is set to one when the aircraft will not fly the path described
+by the TCP data.</p></li>
+<li><p>TCP numbers start from zero.</p></li>
+<li><p>LT = Lateral Type</p></li>
+<li><p>VT = Vertical Type</p></li>
+<li><p>TOV gives the estimated time before reaching the point. It is
+defined as the absolute time from midnight.</p></li>
+<li><p>TOV is meaningful only if TOA is set to 0</p></li>
+<li><p>Refer to ICAO Draft SARPs for ACAS for detailed explanations.</p></li>
+<li><p>A positive value represents a right turn, whereas a negative value
+represents a left turn.</p></li>
+<li><p>Value 15 means 15 degrees/s or above.</p></li>
+<li><p>Velocity uncertainty category of the least accurate velocity component</p></li>
+<li><p>Positive longitude indicates East. Positive latitude indicates North.</p></li>
+<li><p>LSB is required to be thinner than 10 ft by ICAO</p></li>
+<li><p>Only DAPs that can not be encoded into other subfields of this item
+should be sent using subfield #25</p></li>
+<li><p>BPS is the barometric pressure setting of the aircraft minus 800 mb.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-390-flight-plan-related-data">
+<h3>I062/390 - Flight Plan Related Data<a class="headerlink" href="#i062-390-flight-plan-related-data" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: All flight plan related information, provided by ground-based systems.</p>
+<p><em>Structure</em>:</p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>TAG</strong> - <em>FPPS Identification Tag</em></p>
+<blockquote>
+<div><p><strong>SAC</strong> - <em>System Area Code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>SIC</strong> - <em>System Identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>CSN</strong> - <em>Callsign</em></p>
+<ul class="simple">
+<li><p>56 bits [<code class="docutils literal notranslate"><span class="pre">........................................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>IFI</strong> - <em>IFPS_FLIGHT_ID</em></p>
+<blockquote>
+<div><p><strong>TYP</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Plan Number</div>
+<div class="line">1: Unit 1 internal flight number</div>
+<div class="line">2: Unit 2 internal flight number</div>
+<div class="line">3: Unit 3 internal flight number</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+</ul>
+<p><strong>NBR</strong> - <em>Number from 0 to 99 999 999</em></p>
+<ul class="simple">
+<li><p>27 bits [<code class="docutils literal notranslate"><span class="pre">...........................</span></code>]</p></li>
+<li><p>unsigned integer</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span></p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 99999999\)</span></p></li>
+</ul>
+</div></blockquote>
+<p><strong>FCT</strong> - <em>Flight Category</em></p>
+<blockquote>
+<div><p><strong>GATOAT</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Unknown</div>
+<div class="line">1: General Air Traffic</div>
+<div class="line">2: Operational Air Traffic</div>
+<div class="line">3: Not applicable</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>FR1FR2</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Instrument Flight Rules</div>
+<div class="line">1: Visual Flight Rules</div>
+<div class="line">2: Not applicable</div>
+<div class="line">3: Controlled Visual Flight Rules</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>RVSM</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Unknown</div>
+<div class="line">1: Approved</div>
+<div class="line">2: Exempt</div>
+<div class="line">3: Not Approved</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>HPR</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Normal Priority Flight</div>
+<div class="line">1: High Priority Flight</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+</div></blockquote>
+<p><strong>TAC</strong> - <em>Type of Aircraft</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>WTC</strong> - <em>Wake Turbulence Category</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>DEP</strong> - <em>Departure Airport</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>DST</strong> - <em>Destination Airport</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>RDS</strong> - <em>Runway Designation</em></p>
+<blockquote>
+<div><p><strong>NU1</strong> - <em>First number</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>NU2</strong> - <em>Second number</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>LTR</strong> - <em>Letter</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+</div></blockquote>
+<p><strong>CFL</strong> - <em>Current Cleared Flight Level</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “FL”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> FL = <span class="math notranslate nohighlight">\(1 / {4}\)</span> FL <span class="math notranslate nohighlight">\(\approx 0.25\)</span> FL</p></li>
+</ul>
+<p><strong>CTL</strong> - <em>Current Control Position</em></p>
+<blockquote>
+<div><p><strong>Centre</strong> - <em>8-bit group Identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>Position</strong> - <em>8-bit Control Position identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>TOD</strong> - <em>Time of Departure / Arrival</em></p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>TYP</strong></p>
+<ul>
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Scheduled off-block time</div>
+<div class="line">1: Estimated off-block time</div>
+<div class="line">2: Estimated take-off time</div>
+<div class="line">3: Actual off-block time</div>
+<div class="line">4: Predicted time at runway hold</div>
+<div class="line">5: Actual time at runway hold</div>
+<div class="line">6: Actual line-up time</div>
+<div class="line">7: Actual take-off time</div>
+<div class="line">8: Estimated time of arrival</div>
+<div class="line">9: Predicted landing time</div>
+<div class="line">10: Actual landing time</div>
+<div class="line">11: Actual time off runway</div>
+<div class="line">12: Predicted time to gate</div>
+<div class="line">13: Actual on-block time</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>DAY</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Today</div>
+<div class="line">1: Yesterday</div>
+<div class="line">2: Tomorrow</div>
+<div class="line">3: Invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>HOR</strong> - <em>Hours</em></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+<li><p>unsigned integer</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span></p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 23\)</span></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>MIN</strong> - <em>Minutes</em></p>
+<ul class="simple">
+<li><p>6 bits [<code class="docutils literal notranslate"><span class="pre">......</span></code>]</p></li>
+<li><p>unsigned integer</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span></p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 59\)</span></p></li>
+</ul>
+<p><strong>AVS</strong> - <em>Seconds Available Flag</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Seconds available</div>
+<div class="line">1: Seconds not available</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>SEC</strong> - <em>Seconds</em></p>
+<ul class="simple">
+<li><p>6 bits [<code class="docutils literal notranslate"><span class="pre">......</span></code>]</p></li>
+<li><p>unsigned integer</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span></p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 59\)</span></p></li>
+</ul>
+</div></blockquote>
+<p><strong>AST</strong> - <em>Aircraft Stand</em></p>
+<ul class="simple">
+<li><p>48 bits [<code class="docutils literal notranslate"><span class="pre">................................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>STS</strong> - <em>Stand Status</em></p>
+<blockquote>
+<div><p><strong>EMP</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Empty</div>
+<div class="line">1: Occupied</div>
+<div class="line">2: Unknown</div>
+<div class="line">3: Invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AVL</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Available</div>
+<div class="line">1: Not available</div>
+<div class="line">2: Unknown</div>
+<div class="line">3: Invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+</div></blockquote>
+<p><strong>STD</strong> - <em>Standard Instrument Departure</em></p>
+<ul class="simple">
+<li><p>56 bits [<code class="docutils literal notranslate"><span class="pre">........................................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>STA</strong> - <em>Standard Instrument Arrival</em></p>
+<ul class="simple">
+<li><p>56 bits [<code class="docutils literal notranslate"><span class="pre">........................................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+<p><strong>PEM</strong> - <em>Pre-Emergency Mode 3/A</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+</ul>
+<p><strong>VA</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No valid Mode 3/A available</div>
+<div class="line">1: Valid Mode 3/A available</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ABCD</strong> - <em>Mode-3/A reply in octal representation</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>PEC</strong> - <em>Pre-Emergency Callsign</em></p>
+<ul class="simple">
+<li><p>56 bits [<code class="docutils literal notranslate"><span class="pre">........................................................</span></code>]</p></li>
+<li><p>Ascii string (8-bits per character)</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The up-to-date list of SACs is published on the Eurocontrol Web Site
+(<a class="reference external" href="http://www.eurocontrol.int">http://www.eurocontrol.int</a>).</p></li>
+<li><p>Each one of the seven Octets contains an ASCII Character.
+TheCallsign is always left adjusted. It contains up to seven
+upper-case alphanumeric characters, the remaining character
+positions (if any)are padded with space characters.</p></li>
+<li><p>Each one of the four Octets composing the type of an aircraft
+contains an ASCII Character (upper-case alphanumeric characters
+with trailing spaces).</p></li>
+<li><p>The types of aircraft are defined in [Ref.4]</p></li>
+<li><p>Each one of the four Octets composing the name of an airport
+contains an ASCII Character (upper case alphabetic).</p></li>
+<li><p>The Airport Names are indicated in the ICAO Location Indicators book.</p></li>
+<li><p>Each one of the four Octets composing the name of an airport
+contains an ASCII Character (upper case alphabetic).</p></li>
+<li><p>The Airport Names are indicated in the ICAO Location Indicators book.</p></li>
+<li><p>NU1, NU2 and LTR each contain an ASCII character</p></li>
+<li><p>For details refer to.[5] Section 5</p></li>
+<li><p>The centre and the control position identification codes have to be
+defined between communication partners.</p></li>
+<li><p>Estimated times are derived from flight plan systems. Predicted
+times are derived by the fusion system, based on surveillance
+data. For definitions, see [Ref.4]</p></li>
+<li><p>Each one of the six Octets contains an ASCII Character. The Aircraft
+Stand identification is always left adjusted. It contains up
+to six upper-case alphanumeric characters, the remaining character
+positions (if any) are padded with space characters.</p></li>
+<li><p>Each one of the seven Octets contains an ASCII Character.
+The SID is always left adjusted. It contains up to seven
+alphanumeric characters, the remaining character positions
+(if any) are padded with space characters.</p></li>
+<li><p>Each one of the seven Octets contains an ASCII Character.
+The STAR is always left adjusted. It contains up to seven
+alphanumeric characters, the remaining character positions
+(if any) are padded with space characters.</p></li>
+<li><p>This subfield is used only when the aircraft is transmitting
+an emergency Mode 3/A code</p></li>
+<li><p>If VA = 0, the content of bits 12/1 is meaningless</p></li>
+<li><p>Each one of the seven Octets contains an ASCII Character.
+The Callsign is always left adjusted. It contains up to seven
+upper-case alphanumeric characters, the remaining character
+positions (if any) are padded with space characters</p></li>
+<li><p>This subfield is used only when an emergency Mode 3/A is associated
+with the track (I062/390 Subfield #17)</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-500-estimated-accuracies">
+<h3>I062/500 - Estimated Accuracies<a class="headerlink" href="#i062-500-estimated-accuracies" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Overview of all important accuracies</p>
+<p><em>Structure</em>:</p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>APC</strong> - <em>Estimated Accuracy Of Track Position (Cartesian)</em></p>
+<blockquote>
+<div><p><strong>X</strong> - <em>APC (X-Component)</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 1</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{1}}\)</span> m = <span class="math notranslate nohighlight">\(1 / {2}\)</span> m <span class="math notranslate nohighlight">\(\approx 0.5\)</span> m</p></li>
+</ul>
+<p><strong>Y</strong> - <em>APC (Y-Component)</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 1</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{1}}\)</span> m = <span class="math notranslate nohighlight">\(1 / {2}\)</span> m <span class="math notranslate nohighlight">\(\approx 0.5\)</span> m</p></li>
+</ul>
+</div></blockquote>
+<p><strong>COV</strong> - <em>XY covariance component</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 1</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{1}}\)</span> m = <span class="math notranslate nohighlight">\(1 / {2}\)</span> m <span class="math notranslate nohighlight">\(\approx 0.5\)</span> m</p></li>
+</ul>
+<p><strong>APW</strong> - <em>Estimated Accuracy Of Track Position (WGS-84)</em></p>
+<blockquote>
+<div><p><strong>X</strong> - <em>APW (Latitude Component)</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 25</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{25}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {33554432}\)</span> deg <span class="math notranslate nohighlight">\(\approx 5.364418029785156e-06\)</span> deg</p></li>
+</ul>
+<p><strong>Y</strong> - <em>APW (Longitude Component)</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 25</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{25}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {33554432}\)</span> deg <span class="math notranslate nohighlight">\(\approx 5.364418029785156e-06\)</span> deg</p></li>
+</ul>
+</div></blockquote>
+<p><strong>AGA</strong> - <em>Estimated Accuracy Of Calculated Track Geometric Altitude</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 6.25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(6.25\)</span> ft</p></li>
+</ul>
+<p><strong>ABA</strong> - <em>Estimated Accuracy Of Calculated Track Barometric Altitude</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “FL”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> FL = <span class="math notranslate nohighlight">\(1 / {4}\)</span> FL <span class="math notranslate nohighlight">\(\approx 0.25\)</span> FL</p></li>
+</ul>
+<p><strong>ATW</strong> - <em>Estimated Accuracy Of Track Velocity (Cartesian)</em></p>
+<blockquote>
+<div><p><strong>ATVX</strong> - <em>ATV (X-Component)</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s</p></li>
+</ul>
+<p><strong>ATVY</strong> - <em>ATV (Y-Component)</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s</p></li>
+</ul>
+</div></blockquote>
+<p><strong>AA</strong> - <em>Estimated Accuracy Of Acceleration (Cartesian)</em></p>
+<blockquote>
+<div><p><strong>AAX</strong> - <em>AA (X-Component)</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s2”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s2 = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s2 <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s2</p></li>
+</ul>
+<p><strong>AAY</strong> - <em>AA (Y-Component)</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m/s2”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m/s2 = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m/s2 <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m/s2</p></li>
+</ul>
+</div></blockquote>
+<p><strong>ARC</strong> - <em>Estimated Accuracy Of Rate Of Climb/Descent</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 6.25</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “ft/min”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(6.25\)</span> ft/min</p></li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Maximum value means maximum value or above.</p></li>
+<li><p>XY covariance component = sign {Cov(X,Y)} * sqrt {abs [Cov (X,Y)]}</p></li>
+<li><p>The maximum value for the (unsigned) XY covariance component is 16.383 km</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+<li><p>Maximum value means maximum value or above.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i062-510-track-status">
+<h3>I062/510 - Track Status<a class="headerlink" href="#i062-510-track-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identification of a system track</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">24</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">24</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>MIDENT</strong> - <em>MASTER SYSTEM UNIT IDENTIFICATION</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>MTRACK</strong> - <em>MASTER SYSTEM TRACK NUMBER</em></p>
+<ul class="simple">
+<li><p>15 bits [<code class="docutils literal notranslate"><span class="pre">...............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SIDENT</strong> - <em>SLAVE SYSTEM UNIT IDENTIFICATION</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>STRACK</strong> - <em>SLAVE SYSTEM TRACK NUMBER</em></p>
+<ul class="simple">
+<li><p>15 bits [<code class="docutils literal notranslate"><span class="pre">...............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The composed track number is used by co-operating units to uniquely
+identify a track. It consists of the unit identifier and system
+track number for each unit involved in the co-operation. The first
+unit identification identifies the unit that is responsible for the
+track amalgamation.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i062-re-reserved-expansion-field">
+<h3>I062/RE - Reserved Expansion Field<a class="headerlink" href="#i062-re-reserved-expansion-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Expansion</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+<div class="section" id="i062-sp-special-purpose-field">
+<h3>I062/SP - Special Purpose Field<a class="headerlink" href="#i062-sp-special-purpose-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Special Purpose Field</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+</div>
+</div>
+<div class="section" id="user-application-profile-for-category-062">
+<h1>User Application Profile for Category 062<a class="headerlink" href="#user-application-profile-for-category-062" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/010</span></code> - Data Source Identifier</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/015</span></code> - Service Identification</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/070</span></code> - Time Of Track Information</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/105</span></code> - Calculated Position In WGS-84 Co-ordinates</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/100</span></code> - Calculated Track Position</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/185</span></code> - Calculated Track Velocity (Cartesian)</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+<li><ol class="arabic simple" start="8">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/210</span></code> - Calculated Acceleration (Cartesian)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/060</span></code> - Track Mode 3/A Code</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/245</span></code> - Target Identification</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/380</span></code> - Aircraft Derived Data</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/040</span></code> - Track Number</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/080</span></code> - Track Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="14">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/290</span></code> - System Track Update Ages</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+<li><ol class="arabic simple" start="15">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/200</span></code> - Mode of Movement</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="16">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/295</span></code> - Track Data Ages</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="17">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/136</span></code> - Measured Flight Level</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="18">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/130</span></code> - Calculated Track Geometric Altitude</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="19">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/135</span></code> - Calculated Track Barometric Altitude</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="20">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/220</span></code> - Calculated Rate Of Climb/Descent</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="21">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/390</span></code> - Flight Plan Related Data</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+<li><ol class="arabic simple" start="22">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/270</span></code> - Target Size &amp; Orientation</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="23">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/300</span></code> - Vehicle Fleet Identification</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="24">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/110</span></code> - Mode 5 Data reports &amp; Extended Mode 1 Code</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="25">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/120</span></code> - Track Mode 2 Code</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="26">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/510</span></code> - Track Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="27">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/500</span></code> - Estimated Accuracies</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="28">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/340</span></code> - Measured Information</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+<li><ol class="arabic simple" start="29">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="30">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="31">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="32">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="33">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="34">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/RE</span></code> - Reserved Expansion Field</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="35">
+<li><p><code class="docutils literal notranslate"><span class="pre">I062/SP</span></code> - Special Purpose Field</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat062 category specification 2014-12-01, 1.17 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 1970, test.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>

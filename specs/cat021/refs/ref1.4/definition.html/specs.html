@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Asterix expansion 021 - ADS-B Target Reports Expansion &#8212; cat021 expansion specification 2018-03-08, 1.4 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat021 expansion specification 2018-03-08, 1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Asterix expansion 021 - ADS-B Target Reports Expansion</a><ul>
+<li><a class="reference internal" href="#description-of-asterix-expansion">Description of asterix expansion</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Indices and tables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/specs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="asterix-expansion-021-ads-b-target-reports-expansion">
+<h1>Asterix expansion 021 - ADS-B Target Reports Expansion<a class="headerlink" href="#asterix-expansion-021-ads-b-target-reports-expansion" title="Permalink to this headline">¶</a></h1>
+<p><strong>category</strong>: 021</p>
+<p><strong>edition</strong>: 1.4</p>
+<p><strong>date</strong>: 2018-03-08</p>
+<div class="section" id="description-of-asterix-expansion">
+<h2>Description of asterix expansion<a class="headerlink" href="#description-of-asterix-expansion" title="Permalink to this headline">¶</a></h2>
+<p>Compound item (fspec=8 bits)</p>
+<blockquote>
+<div><p><strong>BPS</strong> - <em>Barometric Pressure Setting</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>BPS</strong> - <em>Barometric Pressure Setting</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 0.1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “hPa”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(0.1\)</span> hPa</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 0\)</span> hPa</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 409.5\)</span> hPa</p></li>
+</ul>
+<dl>
+<dt>remark</dt><dd><p>Notes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>BPS is the barometric pressure setting of the aircraft minus 800 hPa</p></li>
+<li><p>A value of “0” indicates that in the aircraft a value of 800 hPa or
+less has been selected.</p></li>
+<li><p>A value of “409.5” indicates that in the aircraft a value of 1209.5
+hPa or more has been selected.</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>SelH</strong> - <em>Selected Heading</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>HDR</strong> - <em>Horizontal Reference Direction</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: True North</div>
+<div class="line">1: Magnetic North</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Stat</strong> - <em>Selected Heading Status</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Data is either unavailable or invalid.</div>
+<div class="line">1: Data is available and valid.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SelH</strong> - <em>Selected Heading</em></p>
+<ul class="simple">
+<li><p>10 bits [<code class="docutils literal notranslate"><span class="pre">..........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 45</p></li>
+<li><p>fractional bits: 6</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(45 / {2^{6}}\)</span> deg = <span class="math notranslate nohighlight">\(45 / {64}\)</span> deg <span class="math notranslate nohighlight">\(\approx 0.703125\)</span> deg</p></li>
+</ul>
+<dl class="simple">
+<dt>remark</dt><dd><p>On many aircraft, the ADS-B Transmitting Subsystem receives
+Selected Heading from a Mode Control Panel / Flight Control Unit
+(MCP / FCU). Users of this data are cautioned that the Selected
+Heading value transmitted by the ADS-B Transmitting Subsystem
+does not necessarily reflect the true intention of the airplane during
+certain flight modes (e.g., during LNAV mode).</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>NAV</strong> - <em>Navigation Mode</em></p>
+<blockquote>
+<div><p><strong>AP</strong> - <em>Autopilot</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Autopilot not engaged</div>
+<div class="line">1: Autopilot engaged</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>VN</strong> - <em>Vertical Navigation</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Vertical Navigation not active</div>
+<div class="line">1: Vertical Navigation active</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AH</strong> - <em>Altitude Hold</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Altitude Hold not engaged</div>
+<div class="line">1: Altitude Hold engaged</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>AM</strong> - <em>Approach Mode</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Approach Mode not active</div>
+<div class="line">1: Approach Mode active</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<dl class="simple">
+<dt>remark</dt><dd><p>This data-item should only be transmitted if an ADS-B indication has
+been received that the mode bits have been “actively populated”.by
+the avionics (1090 ES version 2 (as defined in I021/210) BDS 6,2,
+subtype 1, bit 47: “Status of MCP / FCU Mode Bits”)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>GAO</strong> - <em>GPS Antenna Offset</em></p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p>
+<blockquote>
+<div><dl class="simple">
+<dt>remark</dt><dd><p>The value of this field is copied from the respective bits 33-40 of
+version 2 (as defined in I021/210) of 1090 ES BDS register 6,5
+(Aircraft Operational Status)</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SGV</strong> - <em>Surface Ground Vector</em></p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>STP</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Aircraft has not stopped</div>
+<div class="line">1: Aircraft has stopped</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>HTS</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Heading/Ground Track data is not valid</div>
+<div class="line">1: Heading/Ground Track data is valid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>HTT</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Heading data provided</div>
+<div class="line">1: Ground Track provided</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>HRD</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: True North</div>
+<div class="line">1: Magnetic North</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>GSS</strong> - <em>Ground speed</em></p>
+<ul class="simple">
+<li><p>11 bits [<code class="docutils literal notranslate"><span class="pre">...........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 3</p></li>
+<li><p>unit: “kts”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{3}}\)</span> kts = <span class="math notranslate nohighlight">\(1 / {8}\)</span> kts <span class="math notranslate nohighlight">\(\approx 0.125\)</span> kts</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>HGT</strong> - <em>Heading/Ground Track information</em></p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 45</p></li>
+<li><p>fractional bits: 4</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(45 / {2^{4}}\)</span> deg = <span class="math notranslate nohighlight">\(45 / {16}\)</span> deg <span class="math notranslate nohighlight">\(\approx 2.8125\)</span> deg</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>STA</strong> - <em>Aircraft Status</em></p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>ES</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Target is not 1090 ES IN capable</div>
+<div class="line">1: Target is 1090 ES IN capable</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>UAT</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Target is not UAT IN capable</div>
+<div class="line">1: Target is UAT IN capable</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>TNH</strong> - <em>True North Heading</em></p>
+<ul>
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 360</p></li>
+<li><p>fractional bits: 16</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(360 / {2^{16}}\)</span> deg = <span class="math notranslate nohighlight">\(360 / {65536}\)</span> deg <span class="math notranslate nohighlight">\(\approx 0.0054931640625\)</span> deg</p>
+<blockquote>
+<div><dl class="simple">
+<dt>remark</dt><dd><p>Magnetic Heading is defined in I021/152.</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MES</strong> - <em>Military Extended Squitter</em></p>
+<p>Compound item (FX)</p>
+<blockquote>
+<div><p><strong>SUM</strong> - <em>Mode 5 Summary</em></p>
+<blockquote>
+<div><p><strong>M5</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No Mode 5 interrogation</div>
+<div class="line">1: Mode 5 interrogation</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ID</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No authenticated Mode 5 ID reply/report</div>
+<div class="line">1: Authenticated Mode 5 ID reply/report</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>DA</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No authenticated Mode 5 Data reply or Report</div>
+<div class="line">1: Authenticated Mode 5 Data reply or Report (i.e any valid Mode 5 reply type other than ID)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>M1</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode 1 code not present or not from Mode 5 reply/report</div>
+<div class="line">1: Mode 1 code from Mode 5 reply/report.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>M2</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode 2 code not present or not from Mode 5 reply/report</div>
+<div class="line">1: Mode 2 code from Mode 5 reply/report.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>M3</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode 3 code not present or not from Mode 5 reply/report</div>
+<div class="line">1: Mode 3 code from Mode 5 reply/report.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MC</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Flightlevel not present or not from Mode 5 reply/report</div>
+<div class="line">1: Flightlevel from Mode 5 reply/report</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>PO</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Position not from Mode 5 report (ADS-B report)</div>
+<div class="line">1: Position from Mode 5 report</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<dl>
+<dt>remark</dt><dd><p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The flag M2 refers to the contents of Subfield #6 below, M3, MC refer
+to the contents of data items I021/070 and I021/145 respectively. The
+flag M1 refers to the contents of Subfield #3 below (Extended Mode 1
+Code in Octal Representation).</p></li>
+<li><p>If a Mode 5 reply/report is received with the Emergency bit set, then
+the Military Emergency bit (ME) in Data Item I021/200, Target Status,
+shall be set.</p></li>
+<li><p>If a Mode 5 reply/report is received with the Identification of Position bit
+set, then the Special Position Identification bit (SPI) in Data Item
+I021/200, Target Status, shall be set.</p></li>
+<li><p>If a Mode 5 report (ID or Data) is received and fullfill the autentication
+criteria the corresponding authentication bit shall be set.</p></li>
+</ol>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>PNO</strong> - <em>Mode 5 PIN /National Origin</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>PIN</strong> - <em>PIN Code</em></p>
+<ul class="simple">
+<li><p>14 bits [<code class="docutils literal notranslate"><span class="pre">..............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+</ul>
+<p><strong>NO</strong> - <em>National Origin Code</em></p>
+<ul class="simple">
+<li><p>11 bits [<code class="docutils literal notranslate"><span class="pre">...........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>EM1</strong> - <em>Extended Mode 1 Code in Octal Representation</em></p>
+<blockquote>
+<div><p><strong>V</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Code validated</div>
+<div class="line">1: Code not validated</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>L</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode 1 code as derived from the report of the transponder</div>
+<div class="line">1: Smoothed Mode 1 code as provided by a local tracker</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>EM1</strong> - <em>Extended Mode 1 Code in Octal Representation</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>Octal string (3-bits per digit)</p></li>
+</ul>
+<dl>
+<dt>remark</dt><dd><p>Notes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Subfield #1 is present, the M1 bit in Subfield #1 indicates whether the
+Extended Mode 1 Code is from a Mode 5 reply or a Mode 1 reply. If
+Subfield #1 is not present, the Extended Mode 1 Code is from a Mode
+1 reply.</p></li>
+<li><p>If Subfield #3 is not present the Mode 1 Code was not reported or all
+Code Bits were equal to 0.</p></li>
+<li><p>The valid bit is set if the Code was only reported once for that target.</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>XP</strong> - <em>X Pulse Presence</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>XP</strong> - <em>X-pulse from Mode 5 PIN reply/report</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-Pulse not present.</div>
+<div class="line">1: X-pulse present.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X5</strong> - <em>X-pulse from Mode 5 Data reply or Report.</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no authenticated Data reply or Report received.</div>
+<div class="line">1: X-pulse set to one (present).</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>XC</strong> - <em>X-pulse from Mode C reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no Mode C reply</div>
+<div class="line">1: X-pulse set to one (present)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X3</strong> - <em>X-pulse from Mode 3/A reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no Mode 3/A reply”</div>
+<div class="line">1: X-pulse set to one (present)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X2</strong> - <em>X-pulse from Mode 2 reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: 0 X-pulse set to zero or no Mode 2 reply</div>
+<div class="line">1: X-pulse set to one (present)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>X1</strong> - <em>X-pulse from Mode 1 reply</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: X-pulse set to zero or no Mode 1 reply</div>
+<div class="line">1: X-pulse set to one (present)</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<dl>
+<dt>remark</dt><dd><p>Within Mode 5 reports, the X-Pulse can be set for the following cases:</p>
+<p>1. In a combined Mode 1 and Mode 2 report: in this case the X5 bit and the X2 bit
+shall be set;</p>
+<p>2. In a combined Mode 3 and Mode C report: in this case the X5 bit and the X3
+bit shall be set;</p>
+<p>3. In a Mode 5 PIN data report: in this case the X5 bit and the XP bit shall be set.
+The X1 bit and the XC bit are meaningless as in Mode 1 and Mode C
+replies/reports the X Pulse is not defined. They are kept for compatibility
+reasons.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>FOM</strong> - <em>Figure of Merit</em></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+</ul>
+<p><strong>FOM</strong> - <em>Figure of Merit</em></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<p><strong>M2</strong> - <em>Mode 2 Code in Octal Representation</em></p>
+<blockquote>
+<div><p><strong>V</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Code validated</div>
+<div class="line">1: Code not validated</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>L</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Mode-2 code as derived from the reply of the transponder</div>
+<div class="line">1: Smoothed Mode-2 code as provided by a local tracker</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>ABCD</strong> - <em>Mode 2 Code in Octal Representation</em></p>
+<ul class="simple">
+<li><p>12 bits [<code class="docutils literal notranslate"><span class="pre">............</span></code>]</p></li>
+<li><p>Octal string (3-bits per digit)</p></li>
+</ul>
+<dl class="simple">
+<dt>remark</dt><dd><p>If Subfield 6 is not present the Mode 2 Code was no reported or all
+Code Bits were equal to 0.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>remark</dt><dd><p>Notes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The Reserved Expansion Field is optional. When used to transmit MES, it shall
+be sent when the targets are represented by Mode 5 Level 2 reports.</p></li>
+<li><p>The information contained in this data item is specific to
+1090MHz Extended Squitter messages transmitted by military
+aircraft (Mode 5 Level 2 squitter).</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat021 expansion specification 2018-03-08, 1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 1970, test.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>

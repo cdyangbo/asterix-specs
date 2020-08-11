@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Asterix category 008 - Monoradar Derived Weather Information &#8212; cat008 category specification 2014-08-24, 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat008 category specification 2014-08-24, 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Asterix category 008 - Monoradar Derived Weather Information</a><ul>
+<li><a class="reference internal" href="#preamble">Preamble</a></li>
+<li><a class="reference internal" href="#description-of-standard-data-items">Description of standard data items</a><ul>
+<li><a class="reference internal" href="#i008-000-message-type">I008/000 - Message Type</a></li>
+<li><a class="reference internal" href="#i008-010-data-source-identifier">I008/010 - Data Source Identifier</a></li>
+<li><a class="reference internal" href="#i008-020-vector-qualifier">I008/020 - Vector Qualifier</a></li>
+<li><a class="reference internal" href="#i008-034-sequence-of-polar-vectors-in-spf-notation">I008/034 - Sequence of Polar Vectors in SPF Notation</a></li>
+<li><a class="reference internal" href="#i008-036-sequence-of-cartesian-vectors-in-spf-notation">I008/036 - Sequence of Cartesian Vectors in SPF Notation</a></li>
+<li><a class="reference internal" href="#i008-038-sequence-of-weather-vectors-in-spf-notation">I008/038 - Sequence of Weather Vectors in SPF Notation</a></li>
+<li><a class="reference internal" href="#i008-040-contour-identifier">I008/040 - Contour Identifier</a></li>
+<li><a class="reference internal" href="#i008-050-sequence-of-contour-points-in-spf-notation">I008/050 - Sequence of Contour Points in SPF Notation</a></li>
+<li><a class="reference internal" href="#i008-090-time-of-day">I008/090 - Time of Day</a></li>
+<li><a class="reference internal" href="#i008-100-processing-status">I008/100 - Processing Status</a></li>
+<li><a class="reference internal" href="#i008-110-station-configuration-status">I008/110 - Station Configuration Status</a></li>
+<li><a class="reference internal" href="#i008-120-total-number-of-items-constituting-one-weather-picture">I008/120 - Total Number of Items Constituting One Weather Picture</a></li>
+<li><a class="reference internal" href="#i008-re-reserved-expansion-field">I008/RE - Reserved Expansion Field</a></li>
+<li><a class="reference internal" href="#i008-sp-special-purpose-field">I008/SP - Special Purpose Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-application-profile-for-category-008">User Application Profile for Category 008</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Indices and tables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/specs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="asterix-category-008-monoradar-derived-weather-information">
+<h1>Asterix category 008 - Monoradar Derived Weather Information<a class="headerlink" href="#asterix-category-008-monoradar-derived-weather-information" title="Permalink to this headline">¶</a></h1>
+<p><strong>category</strong>: 008</p>
+<p><strong>edition</strong>: 1.2</p>
+<p><strong>date</strong>: 2014-08-24</p>
+<div class="section" id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
+<p>Surveillance data exchange.</p>
+</div>
+<div class="section" id="description-of-standard-data-items">
+<h2>Description of standard data items<a class="headerlink" href="#description-of-standard-data-items" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="i008-000-message-type">
+<h3>I008/000 - Message Type<a class="headerlink" href="#i008-000-message-type" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: This Data Item allows for a more convenient handling of the messages
+at the receiver side by further defining the type of transaction.</p>
+<p><em>Structure</em>:</p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: Polar vector</div>
+<div class="line">2: Cartesian vector of start point/ length</div>
+<div class="line">3: Contour record</div>
+<div class="line">4: Cartesian start point and end point vector</div>
+<div class="line">254: SOP message</div>
+<div class="line">255: EOP message</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="i008-010-data-source-identifier">
+<h3>I008/010 - Data Source Identifier<a class="headerlink" href="#i008-010-data-source-identifier" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identification of the radar station from which the data are received.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>SAC</strong> - <em>System Area Code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>SIC</strong> - <em>System Identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><p>The defined SACs are on the EUROCONTROL ASTERIX website
+(www.eurocontrol.int/asterix)</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-020-vector-qualifier">
+<h3>I008/020 - Vector Qualifier<a class="headerlink" href="#i008-020-vector-qualifier" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Precipitation intensity level, shading orientation of the vectors
+representing the precipitation area and coordinate system used.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>ORG</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Local Coordinates</div>
+<div class="line">1: System Coordinates</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>I</strong> - <em>Intensity level (range zero to seven)</em></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>S</strong> - <em>Shading orientation with respect to North, as follows:</em></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: 0°</div>
+<div class="line">1: 22.5°</div>
+<div class="line">2: 45°</div>
+<div class="line">3: 67.5°</div>
+<div class="line">4: 90°</div>
+<div class="line">5: 112.5°</div>
+<div class="line">6: 135°</div>
+<div class="line">7: 157.5°</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+</ul>
+<p><strong>TST</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default</div>
+<div class="line">1: Test vector</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ER</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default</div>
+<div class="line">1: Error condition encountered</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><p>For polar vectors bits-4/2 are meaningless and are set to zero.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-034-sequence-of-polar-vectors-in-spf-notation">
+<h3>I008/034 - Sequence of Polar Vectors in SPF Notation<a class="headerlink" href="#i008-034-sequence-of-polar-vectors-in-spf-notation" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Sequence of weather vectors in local polar coordinates.</p>
+<p><em>Structure</em>:</p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>STR</strong> - <em>START RANGE</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>ENDR</strong> - <em>END RANGE</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>AZ</strong> - <em>AZIMUTH</em></p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 360</p></li>
+<li><p>fractional bits: 16</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(360 / {2^{16}}\)</span> deg = <span class="math notranslate nohighlight">\(360 / {65536}\)</span> deg <span class="math notranslate nohighlight">\(\approx 0.0054931640625\)</span> deg</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><p>f is a parameter of the SOP message.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-036-sequence-of-cartesian-vectors-in-spf-notation">
+<h3>I008/036 - Sequence of Cartesian Vectors in SPF Notation<a class="headerlink" href="#i008-036-sequence-of-cartesian-vectors-in-spf-notation" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Sequence of weather vectors, in the representation start point/length,
+in local or in system cartesian coordinates.</p>
+<p><em>Structure</em>:</p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>X</strong> - <em>X-COMPONENT</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>Y</strong> - <em>Y-COMPONENT</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>L</strong> - <em>LENGTH</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><ol class="arabic simple">
+<li><p>LSB of [X, Y, L] is calculated as <span class="math notranslate nohighlight">\(2^{-6+f}\)</span>.</p></li>
+<li><p>f is a parameter of the SOP message.</p></li>
+<li><p>Negative values are expressed in 2’s complement form, bit-24
+and bit-16 are set to 0 for positive values and 1 for negative
+values.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-038-sequence-of-weather-vectors-in-spf-notation">
+<h3>I008/038 - Sequence of Weather Vectors in SPF Notation<a class="headerlink" href="#i008-038-sequence-of-weather-vectors-in-spf-notation" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Sequence of weather vectors, in the representation start point/ end
+point, in local or in system cartesian coordinates.</p>
+<p><em>Structure</em>:</p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>X1</strong> - <em>X1 COMPONENT</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>Y1</strong> - <em>Y1 COMPONENT</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>X2</strong> - <em>X2 COMPONENT</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>Y2</strong> - <em>Y2 COMPONENT</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><ol class="arabic simple">
+<li><p>LSB of [X1, Y1, X2, Y2] is calculated as <span class="math notranslate nohighlight">\(2^{-6+f}\)</span>.</p></li>
+<li><p>f is a parameter of the SOP message.</p></li>
+<li><p>Negative values are expressed in 2’s complement form, bits-32,
+24, 16 and 8 are set to 0 for positive values and 1 for negative
+values.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-040-contour-identifier">
+<h3>I008/040 - Contour Identifier<a class="headerlink" href="#i008-040-contour-identifier" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Contour serial number together with the precipitation intensity levels
+and the coordinates system used.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>ORG</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Local Coordinates</div>
+<div class="line">1: System Coordinates</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>I</strong> - <em>Intensity level (range zero to seven)</em></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>FST_LST</strong></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Intermediate record of a contour</div>
+<div class="line">1: Last record of a contour of at least two records</div>
+<div class="line">2: First record of a contour of at least two records</div>
+<div class="line">3: First and only record, fully defining a contour</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>CSN</strong> - <em>Contour Serial Number</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><p>The Contour Serial Number provides an unambiguous identification
+for each contour record. Within one update cycle, a serial number
+shall never be assigned twice.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-050-sequence-of-contour-points-in-spf-notation">
+<h3>I008/050 - Sequence of Contour Points in SPF Notation<a class="headerlink" href="#i008-050-sequence-of-contour-points-in-spf-notation" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Cartesian coordinates of a variable number of points defining a contour.</p>
+<p><em>Structure</em>:</p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>X1</strong></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>Y1</strong></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><ol class="arabic simple">
+<li><p>LSB of [X1, Y1] is calculated as <span class="math notranslate nohighlight">\(2^{-6+f}\)</span>.</p></li>
+<li><p>f is a parameter of the SOP message.</p></li>
+<li><p>Negative values are expressed in 2’s complement form, bit-16
+and bit-8 shall be set to 0 for positive values and 1 for
+negative values.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-090-time-of-day">
+<h3>I008/090 - Time of Day<a class="headerlink" href="#i008-090-time-of-day" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Absolute time stamping expressed as Coordinated Universal Time (UTC) time.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 7</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{7}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {128}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.0078125\)</span> s</p></li>
+</ul>
+<dl class="simple">
+<dt>Notes:</dt><dd><ol class="arabic simple">
+<li><p>The time of day value is reset to zero each day at midnight.</p></li>
+<li><p>For time management in radar transmission applications, refer
+to Part 1, paragraph 5.4 [Ref. 1].</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-100-processing-status">
+<h3>I008/100 - Processing Status<a class="headerlink" href="#i008-100-processing-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the scaling factor currently applied, current
+reduction step in use, etc.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">24</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>f</strong> - <em>Scaling factor</em></p>
+<ul class="simple">
+<li><p>5 bits [<code class="docutils literal notranslate"><span class="pre">.....</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span></p></li>
+</ul>
+<p><strong>R</strong> - <em>Current reduction stage in use</em></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>Q</strong> - <em>Processing parameters</em></p>
+<ul class="simple">
+<li><p>15 bits [<code class="docutils literal notranslate"><span class="pre">...............</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><p>f: Scaling factor, negative values are represented in 2’s complement
+form, bit-24 is set to 0 for positive values and 1 for negative values.
+R: Current reduction stage in use. Normal operation is indicated by a
+value of zero. The actual bit signification is application dependent.
+Q: Processing parameters. The actual bit signification isapplication dependent.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-110-station-configuration-status">
+<h3>I008/110 - Station Configuration Status<a class="headerlink" href="#i008-110-station-configuration-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the use and status of some vital hardware
+components of a radar system .</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>DATA</strong> - <em>Unspecified data</em></p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><p>Due to the diversity in hardware design and requirements of present
+and future radar stations, it is felt impractical to attempt to
+define individual bits.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="i008-120-total-number-of-items-constituting-one-weather-picture">
+<h3>I008/120 - Total Number of Items Constituting One Weather Picture<a class="headerlink" href="#i008-120-total-number-of-items-constituting-one-weather-picture" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Total number of vectors, respectively contour points, constituting
+the total weather image, provided with the EOP message.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>unsigned integer</p></li>
+</ul>
+</div>
+<div class="section" id="i008-re-reserved-expansion-field">
+<h3>I008/RE - Reserved Expansion Field<a class="headerlink" href="#i008-re-reserved-expansion-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Expansion</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+<div class="section" id="i008-sp-special-purpose-field">
+<h3>I008/SP - Special Purpose Field<a class="headerlink" href="#i008-sp-special-purpose-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Special Purpose Field</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+</div>
+</div>
+<div class="section" id="user-application-profile-for-category-008">
+<h1>User Application Profile for Category 008<a class="headerlink" href="#user-application-profile-for-category-008" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/010</span></code> - Data Source Identifier</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/000</span></code> - Message Type</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/020</span></code> - Vector Qualifier</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/036</span></code> - Sequence of Cartesian Vectors in SPF Notation</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/034</span></code> - Sequence of Polar Vectors in SPF Notation</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/040</span></code> - Contour Identifier</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/050</span></code> - Sequence of Contour Points in SPF Notation</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+<li><ol class="arabic simple" start="8">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/090</span></code> - Time of Day</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/100</span></code> - Processing Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/110</span></code> - Station Configuration Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/120</span></code> - Total Number of Items Constituting One Weather Picture</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/038</span></code> - Sequence of Weather Vectors in SPF Notation</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/RE</span></code> - Reserved Expansion Field</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="14">
+<li><p><code class="docutils literal notranslate"><span class="pre">I008/SP</span></code> - Special Purpose Field</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat008 category specification 2014-08-24, 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 1970, test.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>

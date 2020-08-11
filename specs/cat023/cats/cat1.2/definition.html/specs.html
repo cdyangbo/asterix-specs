@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Asterix category 023 - CNS/ATM Ground Station and Service Status Reports &#8212; cat023 category specification 2009-03-01, 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat023 category specification 2009-03-01, 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Asterix category 023 - CNS/ATM Ground Station and Service Status Reports</a><ul>
+<li><a class="reference internal" href="#preamble">Preamble</a></li>
+<li><a class="reference internal" href="#description-of-standard-data-items">Description of standard data items</a><ul>
+<li><a class="reference internal" href="#i023-000-report-type">I023/000 - Report Type</a></li>
+<li><a class="reference internal" href="#i023-010-data-source-identifier">I023/010 - Data Source Identifier</a></li>
+<li><a class="reference internal" href="#i023-015-service-type-and-identification">I023/015 - Service Type and Identification</a></li>
+<li><a class="reference internal" href="#i023-070-time-of-day">I023/070 - Time of Day</a></li>
+<li><a class="reference internal" href="#i023-100-ground-station-status">I023/100 - Ground Station Status</a></li>
+<li><a class="reference internal" href="#i023-101-service-configuration">I023/101 - Service Configuration</a></li>
+<li><a class="reference internal" href="#i023-110-service-status">I023/110 - Service Status</a></li>
+<li><a class="reference internal" href="#i023-120-service-statistics">I023/120 - Service Statistics</a></li>
+<li><a class="reference internal" href="#i023-200-operational-range">I023/200 - Operational Range</a></li>
+<li><a class="reference internal" href="#i023-re-reserved-expansion-field">I023/RE - Reserved Expansion Field</a></li>
+<li><a class="reference internal" href="#i023-sp-special-purpose-field">I023/SP - Special Purpose Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-application-profile-for-category-023">User Application Profile for Category 023</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Indices and tables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/specs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="asterix-category-023-cns-atm-ground-station-and-service-status-reports">
+<h1>Asterix category 023 - CNS/ATM Ground Station and Service Status Reports<a class="headerlink" href="#asterix-category-023-cns-atm-ground-station-and-service-status-reports" title="Permalink to this headline">¶</a></h1>
+<p><strong>category</strong>: 023</p>
+<p><strong>edition</strong>: 1.2</p>
+<p><strong>date</strong>: 2009-03-01</p>
+<div class="section" id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
+<p>Surveillance data exchange.</p>
+</div>
+<div class="section" id="description-of-standard-data-items">
+<h2>Description of standard data items<a class="headerlink" href="#description-of-standard-data-items" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="i023-000-report-type">
+<h3>I023/000 - Report Type<a class="headerlink" href="#i023-000-report-type" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: This Data Item allows for a more convenient handling of the
+reports at the receiver side by further defining the type of
+transaction.</p>
+<p><em>Structure</em>:</p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: Ground Station Status report</div>
+<div class="line">2: Service Status report</div>
+<div class="line">3: Service Statistics report</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<dl class="simple">
+<dt>NOTES:</dt><dd><ol class="arabic simple">
+<li><p>In applications where transactions of various types are exchanged, the
+Report Type Data Item facilitates the proper report handling at the
+receiver side.</p></li>
+<li><p>All Report Type values are reserved for common standard use.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="i023-010-data-source-identifier">
+<h3>I023/010 - Data Source Identifier<a class="headerlink" href="#i023-010-data-source-identifier" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identification of the Ground Station from which the data is received.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>SAC</strong> - <em>System Area Code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>SIC</strong> - <em>System Identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>The up-to-date list of SACs is published on the
+EUROCONTROL Web Site (<a class="reference external" href="http://www.eurocontrol.int/asterix">http://www.eurocontrol.int/asterix</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="i023-015-service-type-and-identification">
+<h3>I023/015 - Service Type and Identification<a class="headerlink" href="#i023-015-service-type-and-identification" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identifies the type of service being reported.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>SID</strong> - <em>Service Identification</em></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>STYP</strong> - <em>Type of Service</em></p>
+<ul>
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: ADS-B VDL4</div>
+<div class="line">2: ADS-B Ext Squitter</div>
+<div class="line">3: ADS-B UAT</div>
+<div class="line">4: TIS-B VDL4</div>
+<div class="line">5: TIS-B Ext Squitter</div>
+<div class="line">6: TIS-B UAT</div>
+<div class="line">7: FIS-B VDL4</div>
+<div class="line">8: GRAS VDL4</div>
+<div class="line">9: MLT</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>The service identification is allocated by the system.</p></li>
+<li><p>The service identification is also available in item I021/015.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="i023-070-time-of-day">
+<h3>I023/070 - Time of Day<a class="headerlink" href="#i023-070-time-of-day" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Absolute time stamping expressed as UTC time.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 7</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{7}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {128}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.0078125\)</span> s</p></li>
+</ul>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The time of day value is reset to zero each day at midnight.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i023-100-ground-station-status">
+<h3>I023/100 - Ground Station Status<a class="headerlink" href="#i023-100-ground-station-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the status of a Ground Station.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>NOGO</strong> - <em>Operational Release Status of the Data</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Data is released for operational use</div>
+<div class="line">1: Data must not be used operationally</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>ODP</strong> - <em>Data Processor Overload Indicator</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default, no overload</div>
+<div class="line">1: Overload in DP</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>OXT</strong> - <em>Ground Interface Data Communications Overload</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Default, no overload</div>
+<div class="line">1: Overload in transmission subsystem</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>MSC</strong> - <em>Monitoring System Connected Status</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Monitoring system not connected or unknown</div>
+<div class="line">1: Monitoring system connected</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TSV</strong> - <em>Time Source Validity</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: valid</div>
+<div class="line">1: invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SPO</strong> - <em>Indication of spoofing attack</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: no spoofing detected</div>
+<div class="line">1: potential spoofing attack</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>RN</strong> - <em>Renumbering Indication for Track ID</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: default</div>
+<div class="line">1: track numbering has restarted</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>GSSP</strong> - <em>Ground Station Status Reporting Period</em></p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 1\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 127\)</span> s</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A time source is considered as valid when either externally
+synchronised or running on a local oscillator within the
+required accuracy of UTC.</p></li>
+<li><p>Bit 8 (NOGO), when set to “1” indicates that the data transmitted
+by the GS is not released for operational use.</p></li>
+<li><p>Bit 2 indicates that the allocation of Track-IDs (Item I021/161)
+was re-started.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i023-101-service-configuration">
+<h3>I023/101 - Service Configuration<a class="headerlink" href="#i023-101-service-configuration" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the configuration of a Service.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>RP</strong> - <em>Report Period for Category 021 Reports</em></p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Data driven mode</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SC</strong> - <em>Service Class</em></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No information</div>
+<div class="line">1: NRA class</div>
+<div class="line">2: reserved for future use</div>
+<div class="line">3: reserved for future use</div>
+<div class="line">4: reserved for future use</div>
+<div class="line">5: reserved for future use</div>
+<div class="line">6: reserved for future use</div>
+<div class="line">7: reserved for future use</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>SSSP</strong> - <em>Service Status Reporting Period</em></p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= 1\)</span> s</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 127\)</span> s</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i023-110-service-status">
+<h3>I023/110 - Service Status<a class="headerlink" href="#i023-110-service-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the status of the Service provided by a Ground Station.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>4 bits [<code class="docutils literal notranslate"><span class="pre">....</span></code>]</p></li>
+</ul>
+<p><strong>STAT</strong> - <em>Status of the Service</em></p>
+<ul>
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Unknown</div>
+<div class="line">1: Failed</div>
+<div class="line">2: Disabled</div>
+<div class="line">3: Degraded</div>
+<div class="line">4: Normal</div>
+<div class="line">5: Initialisation</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i023-120-service-statistics">
+<h3>I023/120 - Service Statistics<a class="headerlink" href="#i023-120-service-statistics" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Statistics concerning the service. Provides counts of various ADS-B
+message types that have been received since the report was last sent.</p>
+<p><em>Structure</em>:</p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>TYPE</strong> - <em>Type of report counter</em></p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Number of unknown messages received</div>
+<div class="line">1: Number of ‘too old’ messages received</div>
+<div class="line">2: Number of failed message conversions</div>
+<div class="line">3: Total Number of messages received</div>
+<div class="line">20: Number of TIS-B management messages received</div>
+<div class="line">21: Number of ‘Basic’ messages received</div>
+<div class="line">22: Number of ‘High Dynamic’ messages received</div>
+<div class="line">23: Number of ‘ Full Position’messages received</div>
+<div class="line">24: Number of ‘Basic Ground ‘ messages received</div>
+<div class="line">25: Number of ‘TCP’ messages received</div>
+<div class="line">26: Number of ‘UTC time ‘ messages received</div>
+<div class="line">27: Number of “Data’ messages received</div>
+<div class="line">28: Number of ‘High Resolution’ messages received</div>
+<div class="line">29: Number of ‘Aircraft Target Airborne’ messages received.</div>
+<div class="line">30: Number of ‘Aircraft Target ‘Ground’ messages received.</div>
+<div class="line">31: Number of ‘Ground Vehicle Target’ messages received.</div>
+<div class="line">32: Number of ‘2 slots TCP messages received.</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>REF</strong> - <em>Reference from which the messages are countered</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: From midnight</div>
+<div class="line">1: From the last report</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>7 bits [<code class="docutils literal notranslate"><span class="pre">.......</span></code>]</p></li>
+</ul>
+<p><strong>CV</strong> - <em>32-bit counter value</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i023-200-operational-range">
+<h3>I023/200 - Operational Range<a class="headerlink" href="#i023-200-operational-range" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Currently active operational range of the Ground Station.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “NM”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> NM</p></li>
+</ul>
+<p>Notes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Maximum value indicates “maximum value or above”.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="i023-re-reserved-expansion-field">
+<h3>I023/RE - Reserved Expansion Field<a class="headerlink" href="#i023-re-reserved-expansion-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Expansion</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+<div class="section" id="i023-sp-special-purpose-field">
+<h3>I023/SP - Special Purpose Field<a class="headerlink" href="#i023-sp-special-purpose-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Special Purpose Field</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+</div>
+</div>
+<div class="section" id="user-application-profile-for-category-023">
+<h1>User Application Profile for Category 023<a class="headerlink" href="#user-application-profile-for-category-023" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/010</span></code> - Data Source Identifier</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/000</span></code> - Report Type</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/015</span></code> - Service Type and Identification</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/070</span></code> - Time of Day</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/100</span></code> - Ground Station Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/101</span></code> - Service Configuration</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/200</span></code> - Operational Range</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+<li><ol class="arabic simple" start="8">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/110</span></code> - Service Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/120</span></code> - Service Statistics</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/RE</span></code> - Reserved Expansion Field</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="14">
+<li><p><code class="docutils literal notranslate"><span class="pre">I023/SP</span></code> - Special Purpose Field</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat023 category specification 2009-03-01, 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 1970, test.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Asterix category 019 - Multilateration System Status Messages &#8212; cat019 category specification 2010-12-01, 1.3 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat019 category specification 2010-12-01, 1.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Asterix category 019 - Multilateration System Status Messages</a><ul>
+<li><a class="reference internal" href="#preamble">Preamble</a></li>
+<li><a class="reference internal" href="#description-of-standard-data-items">Description of standard data items</a><ul>
+<li><a class="reference internal" href="#i019-000-message-type">I019/000 - Message Type</a></li>
+<li><a class="reference internal" href="#i019-010-data-source-identifier">I019/010 - Data Source Identifier</a></li>
+<li><a class="reference internal" href="#i019-140-time-of-day">I019/140 - Time of Day</a></li>
+<li><a class="reference internal" href="#i019-550-system-status">I019/550 - System Status</a></li>
+<li><a class="reference internal" href="#i019-551-tracking-processor-detailed-status">I019/551 - Tracking Processor Detailed Status</a></li>
+<li><a class="reference internal" href="#i019-552-remote-sensor-detailed-status">I019/552 - Remote Sensor Detailed Status</a></li>
+<li><a class="reference internal" href="#i019-553-reference-transponder-detailed-status">I019/553 - Reference Transponder Detailed Status</a></li>
+<li><a class="reference internal" href="#i019-600-position-of-the-mlt-system-reference-point">I019/600 - Position of the MLT System Reference Point</a></li>
+<li><a class="reference internal" href="#i019-610-height-of-the-mlt-system-reference-point">I019/610 - Height of the MLT System Reference Point</a></li>
+<li><a class="reference internal" href="#i019-620-wgs-84-undulation">I019/620 - WGS-84 Undulation</a></li>
+<li><a class="reference internal" href="#i019-re-reserved-expansion-field">I019/RE - Reserved Expansion Field</a></li>
+<li><a class="reference internal" href="#i019-sp-special-purpose-field">I019/SP - Special Purpose Field</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-application-profile-for-category-019">User Application Profile for Category 019</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Indices and tables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/specs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="asterix-category-019-multilateration-system-status-messages">
+<h1>Asterix category 019 - Multilateration System Status Messages<a class="headerlink" href="#asterix-category-019-multilateration-system-status-messages" title="Permalink to this headline">¶</a></h1>
+<p><strong>category</strong>: 019</p>
+<p><strong>edition</strong>: 1.3</p>
+<p><strong>date</strong>: 2010-12-01</p>
+<div class="section" id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
+<p>Surveillance data exchange.</p>
+</div>
+<div class="section" id="description-of-standard-data-items">
+<h2>Description of standard data items<a class="headerlink" href="#description-of-standard-data-items" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="i019-000-message-type">
+<h3>I019/000 - Message Type<a class="headerlink" href="#i019-000-message-type" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: This Data Item allows for a more convenient handling of the
+messages at the receiver side by further defining the type of
+information.</p>
+<p><em>Structure</em>:</p>
+<ul>
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: Start of Update Cycle</div>
+<div class="line">2: Periodic Status Message</div>
+<div class="line">3: Event-triggered Status Message</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<dl class="simple">
+<dt>NOTES:</dt><dd><ol class="arabic simple">
+<li><p>In applications where data of various types is exchanged, the Message
+Type Data Item facilitates the proper message handling at the receiver
+side.</p></li>
+<li><p>All Message Type values are reserved for common standard use.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="i019-010-data-source-identifier">
+<h3>I019/010 - Data Source Identifier<a class="headerlink" href="#i019-010-data-source-identifier" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Identification of the system from which the data is received.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>SAC</strong> - <em>System Area Code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><strong>SIC</strong> - <em>System Identification code</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>The up-to-date list of SACs is published on the
+EUROCONTROL Web Site (<a class="reference external" href="http://www.eurocontrol.int/asterix">http://www.eurocontrol.int/asterix</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="i019-140-time-of-day">
+<h3>I019/140 - Time of Day<a class="headerlink" href="#i019-140-time-of-day" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Absolute time stamping expressed as UTC.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>24 bits [<code class="docutils literal notranslate"><span class="pre">........................</span></code>]</p></li>
+<li><p>unsigned quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 7</p></li>
+<li><p>unit: “s”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{7}}\)</span> s = <span class="math notranslate nohighlight">\(1 / {128}\)</span> s <span class="math notranslate nohighlight">\(\approx 0.0078125\)</span> s</p></li>
+</ul>
+<p>Note:</p>
+<blockquote>
+<div><p>The time of day value is reset to zero each day at midnight.</p>
+</div></blockquote>
+</div>
+<div class="section" id="i019-550-system-status">
+<h3>I019/550 - System Status<a class="headerlink" href="#i019-550-system-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the configuration and status of a System.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>NOGO</strong> - <em>Operational Release Status of the System</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Operational</div>
+<div class="line">1: Degraded</div>
+<div class="line">2: NOGO</div>
+<div class="line">3: undefined</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>OVL</strong> - <em>Overload indicator</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: No overload</div>
+<div class="line">1: Overload</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TSV</strong> - <em>Time Source Validity</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: valid</div>
+<div class="line">1: invalid</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TTF</strong> - <em>Test Target</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Test Target Operative</div>
+<div class="line">1: Test Target Failure</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>3 bits [<code class="docutils literal notranslate"><span class="pre">...</span></code>]</p></li>
+</ul>
+</div></blockquote>
+<p>Note:</p>
+<blockquote>
+<div><p>A time source is considered as valid when either externally synchronised
+or running on a local oscillator within the required accuracy of UTC.</p>
+</div></blockquote>
+</div>
+<div class="section" id="i019-551-tracking-processor-detailed-status">
+<h3>I019/551 - Tracking Processor Detailed Status<a class="headerlink" href="#i019-551-tracking-processor-detailed-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the configuration and status of the Tracking processors.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>TP1A</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Standby</div>
+<div class="line">1: Exec</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TP1B</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Faulted</div>
+<div class="line">1: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TP2A</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Standby</div>
+<div class="line">1: Exec</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TP2B</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Faulted</div>
+<div class="line">1: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TP3A</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Standby</div>
+<div class="line">1: Exec</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TP3B</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Faulted</div>
+<div class="line">1: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TP4A</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Standby</div>
+<div class="line">1: Exec</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TP4B</strong></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Faulted</div>
+<div class="line">1: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Note:</p>
+<blockquote>
+<div><p>Both Bits of one TP set to zero means, that this TP is not used
+in the system.</p>
+</div></blockquote>
+</div>
+<div class="section" id="i019-552-remote-sensor-detailed-status">
+<h3>I019/552 - Remote Sensor Detailed Status<a class="headerlink" href="#i019-552-remote-sensor-detailed-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the configuration and status of the Remote Sensors (RS)</p>
+<p><em>Structure</em>:</p>
+<p>Repetitive item, repetition factor 8 bits.</p>
+<blockquote>
+<div><p><strong>RSI</strong> - <em>8-bit Identification number of RS</em></p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>raw value</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><strong>RS1090</strong> - <em>Receiver 1090 MHz</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not present</div>
+<div class="line">1: present</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TX1030</strong> - <em>Transmitter 1030 MHz</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not present</div>
+<div class="line">1: present</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>TX1090</strong> - <em>Transmitter 1090 MHz</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Not present</div>
+<div class="line">1: present</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>RSS</strong> - <em>RS Status</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Faulted</div>
+<div class="line">1: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>RSO</strong> - <em>RS Operational</em></p>
+<ul>
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: Offline</div>
+<div class="line">1: Online</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i019-553-reference-transponder-detailed-status">
+<h3>I019/553 - Reference Transponder Detailed Status<a class="headerlink" href="#i019-553-reference-transponder-detailed-status" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Information concerning the configuration and status of the Reference Transponder.</p>
+<p><em>Structure</em>:</p>
+<p>Extended item with first part <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> long and optional <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> extends.</p>
+<blockquote>
+<div><p><strong>REFTr1</strong> - <em>Ref Trans 1 Status</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: Warning</div>
+<div class="line">2: Faulted</div>
+<div class="line">3: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>REFTr2</strong> - <em>Ref Trans 2 Status</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: Warning</div>
+<div class="line">2: Faulted</div>
+<div class="line">3: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>REFTr3</strong> - <em>Ref Trans 3 Status</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: Warning</div>
+<div class="line">2: Faulted</div>
+<div class="line">3: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+</ul>
+<p><strong>REFTr4</strong> - <em>Ref Trans 4 Status</em></p>
+<ul>
+<li><p>2 bits [<code class="docutils literal notranslate"><span class="pre">..</span></code>]</p></li>
+<li><p>values:</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1: Warning</div>
+<div class="line">2: Faulted</div>
+<div class="line">3: Good</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p>
+<ul class="simple">
+<li><p>1 bit [<code class="docutils literal notranslate"><span class="pre">.</span></code>]</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code></p>
+<ul>
+<li><p>extension bit</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">0: End of data item</div>
+<div class="line">1: Extension into next extent</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i019-600-position-of-the-mlt-system-reference-point">
+<h3>I019/600 - Position of the MLT System Reference Point<a class="headerlink" href="#i019-600-position-of-the-mlt-system-reference-point" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Position of the MLT reference point in WGS-84 Coordinates.</p>
+<p><em>Structure</em>:</p>
+<blockquote>
+<div><p><strong>LAT</strong> - <em>Latitude</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 30</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{30}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {1073741824}\)</span> deg <span class="math notranslate nohighlight">\(\approx 1.6763806343078613e-07\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -90\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 90\)</span> deg</p></li>
+</ul>
+<p><strong>LON</strong> - <em>Longitude</em></p>
+<ul class="simple">
+<li><p>32 bits [<code class="docutils literal notranslate"><span class="pre">................................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 180</p></li>
+<li><p>fractional bits: 30</p></li>
+<li><p>unit: “deg”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(180 / {2^{30}}\)</span> deg = <span class="math notranslate nohighlight">\(180 / {1073741824}\)</span> deg <span class="math notranslate nohighlight">\(\approx 1.6763806343078613e-07\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -180\)</span> deg</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt; 180\)</span> deg</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="i019-610-height-of-the-mlt-system-reference-point">
+<h3>I019/610 - Height of the MLT System Reference Point<a class="headerlink" href="#i019-610-height-of-the-mlt-system-reference-point" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Height of the MLT system reference point in two’s complement form.
+The height shall use mean sea level as the zero reference level.</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>16 bits [<code class="docutils literal notranslate"><span class="pre">................</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 2</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1 / {2^{2}}\)</span> m = <span class="math notranslate nohighlight">\(1 / {4}\)</span> m <span class="math notranslate nohighlight">\(\approx 0.25\)</span> m</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&gt;= -8192\)</span> m</p></li>
+<li><p>value <span class="math notranslate nohighlight">\(&lt;= 8192\)</span> m</p></li>
+</ul>
+</div>
+<div class="section" id="i019-620-wgs-84-undulation">
+<h3>I019/620 - WGS-84 Undulation<a class="headerlink" href="#i019-620-wgs-84-undulation" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: WGS-84 undulation value of the MLT system reference point, in meters.
+Geoid undulation value is the difference between the ellipsoidal height
+and the height above mean sea level</p>
+<p><em>Structure</em>:</p>
+<ul class="simple">
+<li><p>8 bits [<code class="docutils literal notranslate"><span class="pre">........</span></code>]</p></li>
+<li><p>signed quantity</p></li>
+<li><p>scaling factor: 1</p></li>
+<li><p>fractional bits: 0</p></li>
+<li><p>unit: “m”</p></li>
+<li><p>LSB = <span class="math notranslate nohighlight">\(1\)</span> m</p></li>
+</ul>
+</div>
+<div class="section" id="i019-re-reserved-expansion-field">
+<h3>I019/RE - Reserved Expansion Field<a class="headerlink" href="#i019-re-reserved-expansion-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Expansion</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+<div class="section" id="i019-sp-special-purpose-field">
+<h3>I019/SP - Special Purpose Field<a class="headerlink" href="#i019-sp-special-purpose-field" title="Permalink to this headline">¶</a></h3>
+<p><em>Definition</em>: Special Purpose Field</p>
+<p><em>Structure</em>:</p>
+<p>Explicit item</p>
+</div>
+</div>
+</div>
+<div class="section" id="user-application-profile-for-category-019">
+<h1>User Application Profile for Category 019<a class="headerlink" href="#user-application-profile-for-category-019" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/010</span></code> - Data Source Identifier</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/000</span></code> - Message Type</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/140</span></code> - Time of Day</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/550</span></code> - System Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/551</span></code> - Tracking Processor Detailed Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/552</span></code> - Remote Sensor Detailed Status</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/553</span></code> - Reference Transponder Detailed Status</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+<li><ol class="arabic simple" start="8">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/600</span></code> - Position of the MLT System Reference Point</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="9">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/610</span></code> - Height of the MLT System Reference Point</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/620</span></code> - WGS-84 Undulation</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p><code class="docutils literal notranslate"><span class="pre">(spare)</span></code></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/RE</span></code> - Reserved Expansion Field</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="14">
+<li><p><code class="docutils literal notranslate"><span class="pre">I019/SP</span></code> - Special Purpose Field</p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(FX)</span></code> - Field extension indicator</p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">cat019 category specification 2010-12-01, 1.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 1970, test.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>
